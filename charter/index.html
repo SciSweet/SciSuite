@@ -403,6 +403,10 @@ function resolveDownloadUrl(pluginPlatform, callback) {
 document.querySelectorAll('a[data-plugin][data-platform]').forEach(function(a){
     var key = a.getAttribute('data-plugin') + '_' + a.getAttribute('data-platform');
     resolveDownloadUrl(key, function(url){ a.href = url; });
+    // Prevent href="#" navigation if JSON hasn't loaded yet
+    a.addEventListener('click', function(e){
+        if (a.getAttribute('href') === '#') { e.preventDefault(); }
+    });
 });
 // Try Now — download both PS and AI versions
 document.getElementById('tryNowBtn').addEventListener('click', function(e){

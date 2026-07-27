@@ -936,21 +936,24 @@
     // Dynamic download links: read version from updates/*.json
     var dlLinks = document.querySelectorAll('a[data-plugin][data-platform]');
     var cache = {};
+    function buildUrl(base, key, ver){ return base + key + '_v' + ver + '.zxp'; }
     dlLinks.forEach(function(a){
         var plugin = a.getAttribute('data-plugin');
         var platform = a.getAttribute('data-platform');
         var key = plugin + '_' + platform;
-        function applyVersion(ver){
-            a.href = 'download/' + key + '_v' + ver + '.zxp';
-        }
-        if (cache[key]) { applyVersion(cache[key]); return; }
+        if (cache[key]) { a.href = buildUrl('download/', key, cache[key]); return; }
         fetch('updates/' + key + '.json').then(function(r){ return r.json(); }).then(function(data){
             cache[key] = data.latestVersion;
-            // Apply to all links with same key (in case fetch resolves after others)
             document.querySelectorAll('a[data-plugin="'+plugin+'"][data-platform="'+platform+'"]').forEach(function(el){
-                el.href = 'download/' + key + '_v' + data.latestVersion + '.zxp';
+                el.href = buildUrl('download/', key, data.latestVersion);
             });
-        }).catch(function(){ /* keep href="#" as fallback */ });
+        }).catch(function(){});
+    });
+    // Prevent href="#" navigation if JSON hasn't loaded yet
+    document.querySelectorAll('a[data-plugin][data-platform]').forEach(function(a){
+        a.addEventListener('click', function(e){
+            if (a.getAttribute('href') === '#') { e.preventDefault(); }
+        });
     });
 
     var els = document.querySelectorAll('.reveal');
