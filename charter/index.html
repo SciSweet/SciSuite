@@ -261,7 +261,7 @@
     <div class="plugin-header">
         <h1>ChartEr</h1>
         <div class="plugin-tagline">Chart Annotation &amp; Tables</div>
-        <div class="plugin-platforms"><a href="../download/ChartEr_PS_v1.0.0.zxp" class="p-plat ps" style="font-size:12px;padding:5px 10px;" data-tip="Download for Photoshop" download>Ps</a><a href="../download/ChartEr_AI_v1.0.0.zxp" class="p-plat ai" style="font-size:12px;padding:5px 10px;" data-tip="Download for Illustrator" download>Ai</a></div>
+        <div class="plugin-platforms"><a href="#" data-plugin="ChartEr" data-platform="PS" class="p-plat ps" style="font-size:12px;padding:5px 10px;" data-tip="Download for Photoshop" download>Ps</a><a href="#" data-plugin="ChartEr" data-platform="AI" class="p-plat ai" style="font-size:12px;padding:5px 10px;" data-tip="Download for Illustrator" download>Ai</a></div>
         <p class="plugin-overview">ChartEr is a Photoshop/Illustrator CEP plugin optimized for chart annotation and scientific publication figure preparation. It helps researchers quickly complete chart labeling, table drawing, and statistical marking. All graphic elements are created using vector shape layers.</p>
     </div>
 
@@ -386,14 +386,36 @@ document.querySelectorAll('.footer-links a[data-panel]').forEach(function(a){
                 }, 420); }
     });
 });
+// Dynamic download links: read version from updates/*.json
+var versionCache = {};
+function resolveDownloadUrl(pluginPlatform, callback) {
+    if (versionCache[pluginPlatform]) { callback(versionCache[pluginPlatform]); return; }
+    fetch('../updates/' + pluginPlatform + '.json')
+        .then(function(r){ return r.json(); })
+        .then(function(data){
+            var url = '../download/' + pluginPlatform + '_v' + data.latestVersion + '.zxp';
+            versionCache[pluginPlatform] = url;
+            callback(url);
+        })
+        .catch(function(){});
+}
+// Resolve header platform badges
+document.querySelectorAll('a[data-plugin][data-platform]').forEach(function(a){
+    var key = a.getAttribute('data-plugin') + '_' + a.getAttribute('data-platform');
+    resolveDownloadUrl(key, function(url){ a.href = url; });
+});
 // Try Now — download both PS and AI versions
 document.getElementById('tryNowBtn').addEventListener('click', function(e){
     e.preventDefault();
-    var a1 = document.createElement('a');
-    a1.href = '../download/ChartEr_PS_v1.0.0.zxp'; a1.download = ''; document.body.appendChild(a1); a1.click(); document.body.removeChild(a1);
+    resolveDownloadUrl('ChartEr_PS', function(url){
+        var a1 = document.createElement('a');
+        a1.href = url; a1.download = ''; document.body.appendChild(a1); a1.click(); document.body.removeChild(a1);
+    });
     setTimeout(function(){
-        var a2 = document.createElement('a');
-        a2.href = '../download/ChartEr_AI_v1.0.0.zxp'; a2.download = ''; document.body.appendChild(a2); a2.click(); document.body.removeChild(a2);
+        resolveDownloadUrl('ChartEr_AI', function(url){
+            var a2 = document.createElement('a');
+            a2.href = url; a2.download = ''; document.body.appendChild(a2); a2.click(); document.body.removeChild(a2);
+        });
     }, 300);
 });
 </script>

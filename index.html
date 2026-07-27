@@ -797,11 +797,11 @@
             <h3>Photoshop Plugins</h3>
             <div class="dl-card-names"><span>GuideMi</span><span>WesternBo</span><span>ImageXi</span><span>ChartEr</span><span>SciPanel</span></div>
             <div class="dl-icons">
-                <a href="download/GuideMi_PS_v1.0.0.zxp" class="dl-icon-link" data-tip="GuideMi" download><img src="img/guidemi-icon.png" alt="GuideMi"></a>
-                <a href="download/WesternBo_PS_v1.0.0.zxp" class="dl-icon-link" data-tip="WesternBo" download><img src="img/westernbo-icon.png" alt="WesternBo"></a>
-                <a href="download/ImageXi_PS_v1.0.0.zxp" class="dl-icon-link" data-tip="ImageXi" download><img src="img/imagexi-icon.png" alt="ImageXi"></a>
-                <a href="download/ChartEr_PS_v1.0.0.zxp" class="dl-icon-link" data-tip="ChartEr" download><img src="img/charter-icon.png" alt="ChartEr"></a>
-                <a href="download/SciPanel_PS_v1.0.0.zxp" class="dl-icon-link" data-tip="SciPanel" download><img src="img/scipanel-icon.png" alt="SciPanel"></a>
+                <a href="#" class="dl-icon-link" data-tip="GuideMi" data-plugin="GuideMi" data-platform="PS" download><img src="img/guidemi-icon.png" alt="GuideMi"></a>
+                <a href="#" class="dl-icon-link" data-tip="WesternBo" data-plugin="WesternBo" data-platform="PS" download><img src="img/westernbo-icon.png" alt="WesternBo"></a>
+                <a href="#" class="dl-icon-link" data-tip="ImageXi" data-plugin="ImageXi" data-platform="PS" download><img src="img/imagexi-icon.png" alt="ImageXi"></a>
+                <a href="#" class="dl-icon-link" data-tip="ChartEr" data-plugin="ChartEr" data-platform="PS" download><img src="img/charter-icon.png" alt="ChartEr"></a>
+                <a href="#" class="dl-icon-link" data-tip="SciPanel" data-plugin="SciPanel" data-platform="PS" download><img src="img/scipanel-icon.png" alt="SciPanel"></a>
             </div>
         </div>
         <div class="dl-card">
@@ -815,11 +815,11 @@
             <h3>Illustrator Plugins</h3>
             <div class="dl-card-names"><span>GuideMi</span><span>WesternBo</span><span>ImageXi</span><span>ChartEr</span><span>SciPanel</span></div>
             <div class="dl-icons">
-                <a href="download/GuideMi_AI_v1.0.0.zxp" class="dl-icon-link" data-tip="GuideMi" download><img src="img/guidemi-icon.png" alt="GuideMi"></a>
-                <a href="download/WesternBo_AI_v1.0.0.zxp" class="dl-icon-link" data-tip="WesternBo" download><img src="img/westernbo-icon.png" alt="WesternBo"></a>
-                <a href="download/ImageXi_AI_v1.0.0.zxp" class="dl-icon-link" data-tip="ImageXi" download><img src="img/imagexi-icon.png" alt="ImageXi"></a>
-                <a href="download/ChartEr_AI_v1.0.0.zxp" class="dl-icon-link" data-tip="ChartEr" download><img src="img/charter-icon.png" alt="ChartEr"></a>
-                <a href="download/SciPanel_AI_v1.0.0.zxp" class="dl-icon-link" data-tip="SciPanel" download><img src="img/scipanel-icon.png" alt="SciPanel"></a>
+                <a href="#" class="dl-icon-link" data-tip="GuideMi" data-plugin="GuideMi" data-platform="AI" download><img src="img/guidemi-icon.png" alt="GuideMi"></a>
+                <a href="#" class="dl-icon-link" data-tip="WesternBo" data-plugin="WesternBo" data-platform="AI" download><img src="img/westernbo-icon.png" alt="WesternBo"></a>
+                <a href="#" class="dl-icon-link" data-tip="ImageXi" data-plugin="ImageXi" data-platform="AI" download><img src="img/imagexi-icon.png" alt="ImageXi"></a>
+                <a href="#" class="dl-icon-link" data-tip="ChartEr" data-plugin="ChartEr" data-platform="AI" download><img src="img/charter-icon.png" alt="ChartEr"></a>
+                <a href="#" class="dl-icon-link" data-tip="SciPanel" data-plugin="SciPanel" data-platform="AI" download><img src="img/scipanel-icon.png" alt="SciPanel"></a>
             </div>
         </div>
         <a href="install/index.html" class="dl-card" style="cursor:pointer;">
@@ -933,6 +933,26 @@
 
 <script>
 (function(){
+    // Dynamic download links: read version from updates/*.json
+    var dlLinks = document.querySelectorAll('a[data-plugin][data-platform]');
+    var cache = {};
+    dlLinks.forEach(function(a){
+        var plugin = a.getAttribute('data-plugin');
+        var platform = a.getAttribute('data-platform');
+        var key = plugin + '_' + platform;
+        function applyVersion(ver){
+            a.href = 'download/' + key + '_v' + ver + '.zxp';
+        }
+        if (cache[key]) { applyVersion(cache[key]); return; }
+        fetch('updates/' + key + '.json').then(function(r){ return r.json(); }).then(function(data){
+            cache[key] = data.latestVersion;
+            // Apply to all links with same key (in case fetch resolves after others)
+            document.querySelectorAll('a[data-plugin="'+plugin+'"][data-platform="'+platform+'"]').forEach(function(el){
+                el.href = 'download/' + key + '_v' + data.latestVersion + '.zxp';
+            });
+        }).catch(function(){ /* keep href="#" as fallback */ });
+    });
+
     var els = document.querySelectorAll('.reveal');
     if (els.length) {
         var obs = new IntersectionObserver(function(entries){
