@@ -17,4 +17,4 @@ Single-step undo for every operation
 Preset system for consistent lab-wide figure styles
 
 Contact
-Bo Lv — bolyu(at)pitt.edu
+Bo Lv — contact(at)scisuite.cc
