@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.0.1",
+    "latestVersion": "1.0.2",
     "downloadUrl": "https://scisuite.cc/westernbo",
-    "releaseNotes": "Fixed some translation errors."
+    "releaseNotes": "Fixed \"Check for Updates\" not working."
 }
