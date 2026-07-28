@@ -1,3 +1,6 @@
 v1.0.0 07/16/2026 The first version of WesternBo_PS.
 v1.0.1 07/27/2026 Fixed some translation errors.
 v1.0.2 07/28/2026 Fixed "Check for Updates" not working.
+v1.0.3 07/28/2026 Fixed debug configuration (incorrect extension ID) preventing localhost:8088 panel preview
+                  Added missing i18n keys (placeholders.width, placeholders.height) across all 18 locale files
+                   

@@ -1,2 +1,2 @@
 v1.0.0 07/16/2026 The first version of WesternBo_PS.
-v1.0.1 07/28/2026 Fixed some translation errors.
+v1.0.1 07/28/2026 Fixed "Check for Updates" not working.
