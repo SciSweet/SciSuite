@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.0.1",
+    "latestVersion": "1.0.2",
     "downloadUrl": "https://scisuite.cc/imagexi",
-    "releaseNotes": "Fixed \"Check for Updates\" not working."
+    "releaseNotes": "Rounded Corners: added Independent Corners mode for per-corner radius control."
 }
