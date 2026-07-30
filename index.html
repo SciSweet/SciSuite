@@ -423,8 +423,10 @@
         .dl-card .wi svg { width: 22px; height: 22px; }
         .dl-card h3 { font-family: var(--font-display); font-size: 18px; margin-bottom: 10px; }
         .dl-card p { font-size: 13px; color: var(--c-text-secondary); line-height: 1.6; margin-bottom: 18px; flex: 1; }
-        .dl-card-names { display: flex; font-size: 13px; color: var(--c-text-secondary); margin-bottom: 18px; flex: 1; }
-        .dl-card-names span { flex: 1; text-align: center; }
+        .dl-card-names { display: flex; align-items: center; font-size: 13px; color: var(--c-text-secondary); margin-bottom: 18px; flex: 1; }
+        .dl-card-names .dl-names-all { flex-shrink: 0; width: 48px; text-align: center; }
+        .dl-card-names .dl-names-list { display: flex; flex: 1; }
+        .dl-card-names .dl-names-list span { flex: 1; text-align: center; }
         .coming-soon-badge {
             display: inline-flex; align-items: center; gap: 8px; align-self: flex-start;
             padding: 8px 16px; border-radius: var(--r-sm);
@@ -432,7 +434,6 @@
             font-size: 12.5px; font-weight: 500; color: var(--c-text-muted);
         }
         .coming-soon-badge .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--c-accent); animation: dp 2s ease-in-out infinite; }
-        .dl-icons { display: flex; margin-top: auto; padding-top: 14px; border-top: 1px solid var(--c-border-subtle); }
         .dl-icon-link {
             position: relative; flex: 1;
             display: grid; place-items: center; height: 40px; border-radius: var(--r-sm);
@@ -448,6 +449,24 @@
             opacity: 0; pointer-events: none; transition: opacity 0.2s ease;
         }
         .dl-icon-link:hover::after { opacity: 1; }
+        .dl-icons-row { display: flex; align-items: center; margin-top: auto; padding-top: 14px; border-top: 1px solid var(--c-border-subtle); }
+        .dl-all-btn {
+            position: relative; flex-shrink: 0;
+            display: grid; place-items: center; width: 40px; height: 40px; border-radius: var(--r-sm);
+            border: 1px solid var(--c-border); background: var(--c-bg-elevated);
+            transition: all var(--ease); cursor: pointer; margin: 0 4px;
+        }
+        .dl-all-btn:hover { border-color: var(--c-text-muted); background: var(--c-bg-card-hover); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+        .dl-all-btn svg { width: 22px; height: auto; }
+        .dl-all-btn::after {
+            content: attr(data-tip); position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%);
+            padding: 5px 10px; border-radius: 4px; background: var(--c-text); color: var(--c-bg);
+            font-size: 11.5px; font-weight: 500; white-space: nowrap;
+            opacity: 0; pointer-events: none; transition: opacity 0.2s ease;
+        }
+        .dl-all-btn:hover::after { opacity: 1; }
+        .dl-all-btn.loading { pointer-events: none; opacity: 0.6; }
+        .dl-icons { display: flex; flex: 1; }
 
         /* Pricing Overview */
         .pricing-overview { overflow-x: auto; -webkit-overflow-scrolling: touch; }
@@ -795,13 +814,18 @@
                 </svg>
             </div>
             <h3>Photoshop Plugins</h3>
-            <div class="dl-card-names"><span>GuideMi</span><span>WesternBo</span><span>ImageXi</span><span>ChartEr</span><span>SciPanel</span></div>
-            <div class="dl-icons">
-                <a href="#" class="dl-icon-link" data-tip="GuideMi" data-plugin="GuideMi" data-platform="PS" download><img src="img/guidemi-icon.png" alt="GuideMi"></a>
-                <a href="#" class="dl-icon-link" data-tip="WesternBo" data-plugin="WesternBo" data-platform="PS" download><img src="img/westernbo-icon.png" alt="WesternBo"></a>
-                <a href="#" class="dl-icon-link" data-tip="ImageXi" data-plugin="ImageXi" data-platform="PS" download><img src="img/imagexi-icon.png" alt="ImageXi"></a>
-                <a href="#" class="dl-icon-link" data-tip="ChartEr" data-plugin="ChartEr" data-platform="PS" download><img src="img/charter-icon.png" alt="ChartEr"></a>
-                <a href="#" class="dl-icon-link" data-tip="SciPanel" data-plugin="SciPanel" data-platform="PS" download><img src="img/scipanel-icon.png" alt="SciPanel"></a>
+            <div class="dl-card-names"><span class="dl-names-all">All</span><div class="dl-names-list"><span>GuideMi</span><span>WesternBo</span><span>ImageXi</span><span>ChartEr</span><span>SciPanel</span></div></div>
+            <div class="dl-icons-row">
+                <button class="dl-all-btn" data-platform="PS" data-tip="All (Ps)" onclick="downloadAll(this,'PS')">
+                    <svg viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="50" y1="64" x2="50" y2="115" stroke="#e0e0e0" stroke-width="5" stroke-linecap="round"/><polygon points="50,12 73,25 73,50 50,63 27,50 27,25" fill="none" stroke="#e0e0e0" stroke-width="3"/><ellipse cx="50" cy="37.5" rx="16" ry="7" stroke="#e0e0e0" stroke-width="1.8" fill="none" transform="rotate(-45 50 37.5)"/><ellipse cx="50" cy="37.5" rx="16" ry="7" stroke="#e0e0e0" stroke-width="1.8" fill="none" transform="rotate(45 50 37.5)"/><circle cx="50" cy="37.5" r="3.5" fill="#e0e0e0"/><circle cx="50" cy="12" r="4.5" fill="#f44"/><circle cx="73" cy="25" r="4.5" fill="#f44"/><circle cx="73" cy="50" r="4.5" fill="#f44"/><circle cx="27" cy="50" r="4.5" fill="#f44"/><circle cx="27" cy="25" r="4.5" fill="#f44"/></svg>
+                </button>
+                <div class="dl-icons">
+                    <a href="#" class="dl-icon-link" data-tip="GuideMi" data-plugin="GuideMi" data-platform="PS" download><img src="img/guidemi-icon.png" alt="GuideMi"></a>
+                    <a href="#" class="dl-icon-link" data-tip="WesternBo" data-plugin="WesternBo" data-platform="PS" download><img src="img/westernbo-icon.png" alt="WesternBo"></a>
+                    <a href="#" class="dl-icon-link" data-tip="ImageXi" data-plugin="ImageXi" data-platform="PS" download><img src="img/imagexi-icon.png" alt="ImageXi"></a>
+                    <a href="#" class="dl-icon-link" data-tip="ChartEr" data-plugin="ChartEr" data-platform="PS" download><img src="img/charter-icon.png" alt="ChartEr"></a>
+                    <a href="#" class="dl-icon-link" data-tip="SciPanel" data-plugin="SciPanel" data-platform="PS" download><img src="img/scipanel-icon.png" alt="SciPanel"></a>
+                </div>
             </div>
         </div>
         <div class="dl-card">
@@ -813,13 +837,18 @@
                 </svg>
             </div>
             <h3>Illustrator Plugins</h3>
-            <div class="dl-card-names"><span>GuideMi</span><span>WesternBo</span><span>ImageXi</span><span>ChartEr</span><span>SciPanel</span></div>
-            <div class="dl-icons">
-                <a href="#" class="dl-icon-link" data-tip="GuideMi" data-plugin="GuideMi" data-platform="AI" download><img src="img/guidemi-icon.png" alt="GuideMi"></a>
-                <a href="#" class="dl-icon-link" data-tip="WesternBo" data-plugin="WesternBo" data-platform="AI" download><img src="img/westernbo-icon.png" alt="WesternBo"></a>
-                <a href="#" class="dl-icon-link" data-tip="ImageXi" data-plugin="ImageXi" data-platform="AI" download><img src="img/imagexi-icon.png" alt="ImageXi"></a>
-                <a href="#" class="dl-icon-link" data-tip="ChartEr" data-plugin="ChartEr" data-platform="AI" download><img src="img/charter-icon.png" alt="ChartEr"></a>
-                <a href="#" class="dl-icon-link" data-tip="SciPanel" data-plugin="SciPanel" data-platform="AI" download><img src="img/scipanel-icon.png" alt="SciPanel"></a>
+            <div class="dl-card-names"><span class="dl-names-all">All</span><div class="dl-names-list"><span>GuideMi</span><span>WesternBo</span><span>ImageXi</span><span>ChartEr</span><span>SciPanel</span></div></div>
+            <div class="dl-icons-row">
+                <button class="dl-all-btn" data-platform="AI" data-tip="All (Ai)" onclick="downloadAll(this,'AI')">
+                    <svg viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="50" y1="64" x2="50" y2="115" stroke="#e0e0e0" stroke-width="5" stroke-linecap="round"/><polygon points="50,12 73,25 73,50 50,63 27,50 27,25" fill="none" stroke="#e0e0e0" stroke-width="3"/><ellipse cx="50" cy="37.5" rx="16" ry="7" stroke="#e0e0e0" stroke-width="1.8" fill="none" transform="rotate(-45 50 37.5)"/><ellipse cx="50" cy="37.5" rx="16" ry="7" stroke="#e0e0e0" stroke-width="1.8" fill="none" transform="rotate(45 50 37.5)"/><circle cx="50" cy="37.5" r="3.5" fill="#e0e0e0"/><circle cx="50" cy="12" r="4.5" fill="#f44"/><circle cx="73" cy="25" r="4.5" fill="#f44"/><circle cx="73" cy="50" r="4.5" fill="#f44"/><circle cx="27" cy="50" r="4.5" fill="#f44"/><circle cx="27" cy="25" r="4.5" fill="#f44"/></svg>
+                </button>
+                <div class="dl-icons">
+                    <a href="#" class="dl-icon-link" data-tip="GuideMi" data-plugin="GuideMi" data-platform="AI" download><img src="img/guidemi-icon.png" alt="GuideMi"></a>
+                    <a href="#" class="dl-icon-link" data-tip="WesternBo" data-plugin="WesternBo" data-platform="AI" download><img src="img/westernbo-icon.png" alt="WesternBo"></a>
+                    <a href="#" class="dl-icon-link" data-tip="ImageXi" data-plugin="ImageXi" data-platform="AI" download><img src="img/imagexi-icon.png" alt="ImageXi"></a>
+                    <a href="#" class="dl-icon-link" data-tip="ChartEr" data-plugin="ChartEr" data-platform="AI" download><img src="img/charter-icon.png" alt="ChartEr"></a>
+                    <a href="#" class="dl-icon-link" data-tip="SciPanel" data-plugin="SciPanel" data-platform="AI" download><img src="img/scipanel-icon.png" alt="SciPanel"></a>
+                </div>
             </div>
         </div>
         <a href="install/index.html" class="dl-card" style="cursor:pointer;">
@@ -931,6 +960,51 @@
     </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+var pluginNames = ['GuideMi','WesternBo','ImageXi','ChartEr','SciPanel'];
+function downloadAll(btn, platform) {
+    if (btn.classList.contains('loading')) return;
+    btn.classList.add('loading');
+    var origTip = btn.getAttribute('data-tip');
+    btn.setAttribute('data-tip', 'Packing…');
+    // 1. Fetch all version JSONs for this platform
+    Promise.all(pluginNames.map(function(name){
+        return fetch('updates/' + name + '_' + platform + '.json').then(function(r){ return r.json(); }).then(function(data){
+            return { name: name, version: data.latestVersion, key: name + '_' + platform };
+        });
+    })).then(function(plugins){
+        // 2. Fetch all zxp files
+        return Promise.all(plugins.map(function(p){
+            var url = 'download/' + p.key + '_v' + p.version + '.zxp';
+            return fetch(url).then(function(r){ return r.arrayBuffer(); }).then(function(buf){
+                return { filename: p.key + '_v' + p.version + '.zxp', data: buf };
+            });
+        }));
+    }).then(function(files){
+        // 3. Pack into zip
+        var zip = new JSZip();
+        files.forEach(function(f){ zip.file(f.filename, f.data); });
+        return zip.generateAsync({ type: 'blob' });
+    }).then(function(blob){
+        // 4. Trigger download
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'SciSuite_' + platform + '_All.zip';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(a.href);
+        btn.classList.remove('loading');
+        btn.setAttribute('data-tip', origTip);
+    }).catch(function(err){
+        console.error('Download all failed:', err);
+        btn.classList.remove('loading');
+        btn.setAttribute('data-tip', origTip);
+        alert('Download failed. Please try downloading individually.');
+    });
+}
+</script>
 <script>
 (function(){
     // Dynamic download links: read version from updates/*.json
