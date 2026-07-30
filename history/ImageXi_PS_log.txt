@@ -1,3 +1,4 @@
 v1.0.0 07/16/2026 The first version of ImageXi_PS.
 v1.0.1 07/28/2026 Fixed "Check for Updates" not working.
 v1.0.2 07/29/2026 Rounded Corners: added Independent Corners mode for per-corner radius control.
+v1.0.3 07/30/2026 Fixed Edit Text to preserve per-character styles; style overrides now apply only to new/replaced characters instead of all characters.

@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.0.2",
+    "latestVersion": "1.0.3",
     "downloadUrl": "https://scisuite.cc/imagexi",
-    "releaseNotes": "Rounded Corners: added Independent Corners mode for per-corner radius control."
+    "releaseNotes": "Fixed Edit Text to preserve per-character styles; style overrides now apply only to new/replaced characters instead of all characters."
 }
