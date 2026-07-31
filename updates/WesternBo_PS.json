@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.0.3",
+    "latestVersion": "1.0.4",
     "downloadUrl": "https://scisuite.cc/westernbo",
-    "releaseNotes": "Fixed debug configuration (incorrect extension ID) preventing localhost:8088 panel preview. Added missing i18n keys (placeholders.width, placeholders.height) across all 18 locale files."
+    "releaseNotes": "Cols field now shows the total character count when Rows is empty, providing real-time input length feedback."
 }

@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.0.1",
+    "latestVersion": "1.0.2",
     "downloadUrl": "https://scisuite.cc/westernbo",
-    "releaseNotes": "Fixed \"Check for Updates\" not working."
+    "releaseNotes": "Cols field now shows the total character count when Rows is empty, providing real-time input length feedback."
 }

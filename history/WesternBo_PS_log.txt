@@ -3,4 +3,5 @@ v1.0.1 07/27/2026 Fixed some translation errors.
 v1.0.2 07/28/2026 Fixed "Check for Updates" not working.
 v1.0.3 07/28/2026 Fixed debug configuration (incorrect extension ID) preventing localhost:8088 panel preview
                   Added missing i18n keys (placeholders.width, placeholders.height) across all 18 locale files
+v1.0.4 07/31/2026 Cols field now shows the total character count when Rows is empty, providing real-time input length feedback.
                    
