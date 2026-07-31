@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.0.2",
+    "latestVersion": "1.0.3",
     "downloadUrl": "https://scisuite.cc/westernbo",
-    "releaseNotes": "Cols field now shows the total character count when Rows is empty, providing real-time input length feedback."
+    "releaseNotes": "changed default position from Top (single text) to Top-Multi (multi-text)"
 }
