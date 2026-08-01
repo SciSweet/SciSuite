@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.0.5",
+    "latestVersion": "1.0.6",
     "downloadUrl": "https://scisuite.cc/westernbo",
-    "releaseNotes": "changed default position from Top (single text) to Top-Multi (multi-text)"
+    "releaseNotes": "Fix the reset bug in Add Text."
 }
