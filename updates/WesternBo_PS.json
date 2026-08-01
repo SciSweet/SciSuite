@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.0.6",
+    "latestVersion": "1.0.7",
     "downloadUrl": "https://scisuite.cc/westernbo",
-    "releaseNotes": "Fix the reset bug in Add Text."
+    "releaseNotes": "Fixed rotated text overflowing into adjacent lanes in multi-text mode."
 }
