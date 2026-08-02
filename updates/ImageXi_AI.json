@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.0.4",
+    "latestVersion": "1.1.0",
     "downloadUrl": "https://scisuite.cc/imagexi",
-    "releaseNotes": "Added \"Donate\" option to the flyout menu for users who want to support the project via Alipay/WeChat Pay. Fix bugs in \"Inset\" section. Fix bugs of the progress bar."
+    "releaseNotes": "Added \"Copy to All Docs\" option to Copy to Another Doc right-click menu, allowing batch copying of selected objects to all other open documents at once."
 }

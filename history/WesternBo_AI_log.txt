@@ -5,3 +5,4 @@ v1.0.3 07/31/2026 Changed default position from Top (single text) to Top-Multi (
 v1.0.4 08/01/2026 Fix the reset bug in Add Text.
 v1.0.5 08/01/2026 Fixed rotated text overflowing into adjacent lanes in multi-text mode.
 v1.0.6 08/01/2026 Added "Donate" option to the flyout menu for users who want to support the project via Alipay/WeChat Pay.
+v1.1.0 08/02/2026 Added "Copy to All Docs" option to Copy to Another Doc right-click menu, allowing batch copying of selected objects to all other open documents at once.
