@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.0.3",
+    "latestVersion": "1.0.4",
     "downloadUrl": "https://scisuite.cc/imagexi",
-    "releaseNotes": "Fixed Edit Text to preserve per-character styles; style overrides now apply only to new/replaced characters instead of all characters."
+    "releaseNotes": "Added \"Donate\" option to the flyout menu for users who want to support the project via Alipay/WeChat Pay. Fix bugs in \"Inset\" section. Fix bugs of the progress bar."
 }

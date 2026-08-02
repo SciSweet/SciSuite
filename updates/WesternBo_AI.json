@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.0.5",
+    "latestVersion": "1.0.6",
     "downloadUrl": "https://scisuite.cc/westernbo",
-    "releaseNotes": "Fixed rotated text overflowing into adjacent lanes in multi-text mode."
+    "releaseNotes": "Added \"Donate\" option to the flyout menu for users who want to support the project via Alipay/WeChat Pay."
 }

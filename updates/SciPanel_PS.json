@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.0.1",
+    "latestVersion": "1.0.2",
     "downloadUrl": "https://scisuite.cc/scipanel",
-    "releaseNotes": "Fixed \"Check for Updates\" not working."
+    "releaseNotes": "Added \"Donate\" option to the flyout menu for users who want to support the project via Alipay/WeChat Pay."
 }
