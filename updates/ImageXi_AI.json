@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.1.0",
+    "latestVersion": "1.2.0",
     "downloadUrl": "https://scisuite.cc/imagexi",
-    "releaseNotes": "Added \"Copy to All Docs\" option to Copy to Another Doc right-click menu, allowing batch copying of selected objects to all other open documents at once."
+    "releaseNotes": "Added the \"Scale Bar Style\" function."
 }
