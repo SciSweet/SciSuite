@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.3.0",
+    "latestVersion": "1.4.2",
     "downloadUrl": "https://scisuite.cc/imagexi",
-    "releaseNotes": "Added the \"Scale Bar Style\" function."
+    "releaseNotes": "Added the \"Remove Rounded Corners\" and the \"Desaturate\" function. Removed success popup messages of Phrase Bank section. Fix some bugs for the Pseudo Color function."
 }
