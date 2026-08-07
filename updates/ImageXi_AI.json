@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.3.2",
+    "latestVersion": "1.3.3",
     "downloadUrl": "https://scisuite.cc/imagexi",
-    "releaseNotes": "Added the \"Remove Rounded Corners\" function. Fix some bugs."
+    "releaseNotes": "Fix the reset bugs in the two Scale Bar sections."
 }
