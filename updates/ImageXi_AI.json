@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.2.0",
+    "latestVersion": "1.3.2",
     "downloadUrl": "https://scisuite.cc/imagexi",
-    "releaseNotes": "Added the \"Scale Bar Style\" function."
+    "releaseNotes": "Added the \"Remove Rounded Corners\" function. Fix some bugs."
 }
