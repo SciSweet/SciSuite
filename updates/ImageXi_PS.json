@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.4.2",
+    "latestVersion": "1.4.3",
     "downloadUrl": "https://scisuite.cc/imagexi",
-    "releaseNotes": "Added the \"Remove Rounded Corners\" and the \"Desaturate\" function. Removed success popup messages of Phrase Bank section. Fix some bugs for the Pseudo Color function."
+    "releaseNotes": "Fix incomplete reset in Scale Bar and Scale Bar (Inset). Add missing smartInsetSpacing field to serializeInsetPresets, fixing Smart Inset spacing not persisting across presets."
 }

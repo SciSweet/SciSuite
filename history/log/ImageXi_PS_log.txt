@@ -11,3 +11,5 @@ v1.3.0 08/04/2026 Added the "Scale Bar Style" function.
 v1.4.2 08/06/2026 Added the "Remove Rounded Corners" and the "Desaturate" function.
                   Removed success popup messages of Phrase Bank section.
                   Fix some bugs for the Pseudo Color function.
+v1.4.3 08/08/2026 Fix incomplete reset in Scale Bar and Scale Bar (Inset)
+                  Add missing smartInsetSpacing field to serializeInsetPresets, fixing Smart Inset spacing not persisting across presets.  
