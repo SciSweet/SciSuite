@@ -148,23 +148,57 @@
             margin-bottom: 28px;
         }
         .feat-grid {
-            display: flex; flex-direction: column; gap: 1px;
-            background: var(--c-border); border-radius: var(--r-lg); overflow: hidden;
+            columns: 3; column-gap: 16px;
         }
-        .feat-item {
-            display: flex; align-items: flex-start;
-            padding: 22px 28px; background: var(--c-bg-card);
-            transition: background var(--ease);
+        .feat-card {
+            background: var(--c-bg-card); border: 1px solid var(--c-border); border-radius: var(--r-md);
+            overflow: hidden; transition: background var(--ease);
+            break-inside: avoid; margin-bottom: 16px;
         }
-        .feat-item:hover { background: var(--c-bg-card-hover); }
-        .feat-content {
-            display: flex; flex-direction: column; gap: 4px;
+        .feat-card:hover { background: var(--c-bg-card-hover); }
+        .feat-card-title {
+            padding: 12px 16px; font-size: 13.5px; font-weight: 600; color: var(--c-text);
         }
-        .feat-content strong {
-            font-size: 15px; color: var(--c-text); font-weight: 600;
+        .feat-card-desc {
+            padding: 0 16px 14px; font-size: 12.5px; color: var(--c-text-secondary); line-height: 1.55;
         }
-        .feat-content span {
-            font-size: 13.5px; color: var(--c-text-secondary); line-height: 1.6;
+        .feat-card video,
+        .feat-card img {
+            width: 100%; height: auto; display: block;
+        }
+        .feat-card .video-wrap {
+            position: relative; cursor: pointer;
+        }
+        .feat-card .video-wrap .play-btn {
+            position: absolute; inset: 0; display: grid; place-items: center;
+            background: rgba(0,0,0,0.35); transition: opacity 0.3s ease;
+        }
+        .feat-card .video-wrap .play-btn svg {
+            width: 48px; height: 48px; fill: #fff; opacity: 0.9;
+            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+        }
+        .feat-card .video-wrap.playing .play-btn {
+            opacity: 0; pointer-events: none;
+        }
+        .feat-card .video-wrap:hover .play-btn {
+            background: rgba(0,0,0,0.25);
+        }
+        .feat-card .video-wrap.playing:hover .play-btn {
+            opacity: 0.7; pointer-events: auto;
+        }
+        .feat-card .video-wrap.playing:hover .play-btn svg {
+            /* swap to pause icon via CSS — handled in JS by toggling innerHTML */
+        }
+        .feat-card .feat-placeholder {
+            width: 100%; aspect-ratio: 4/3; display: grid; place-items: center;
+            background: var(--c-bg-elevated); border-bottom: 1px solid var(--c-border-subtle);
+            color: var(--c-text-muted); font-size: 12px; font-weight: 500;
+        }
+        @media (max-width: 768px) {
+            .feat-grid { columns: 2; }
+        }
+        @media (max-width: 480px) {
+            .feat-grid { columns: 1; }
         }
 
         /* Pricing */
@@ -273,48 +307,197 @@
     <div class="features-section">
         <h2 class="features-title">Key Features</h2>
         <div class="feat-grid">
-                <div class="feat-item">
-                    <div class="feat-content">
-                        <strong>Quick Actions</strong>
-                        <span>Quick access to document merging, layer copying, special characters, and guide management.</span>
+                <div class="feat-card">
+                    <div class="feat-card-title">MinusPlus Matrix + Line Marker</div>
+                    <div class="feat-card-desc">Add line markers, plus/minus matrices, and lane labels above blot images — a complete top annotation workflow.</div>
+                    <div class="video-wrap" onclick="toggleVideo(this)">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="minusplus-linemarker.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
                 </div>
-                <div class="feat-item">
-                    <div class="feat-content">
-                        <strong>Phrase Bank</strong>
-                        <span>Common phrase library for quickly inserting experiment annotation text.</span>
+                <div class="feat-card">
+                    <div class="feat-card-title">Stroke Border</div>
+                    <div class="feat-card-desc">Add precise vector borders to selected layers with multiple modes: Vector, Clipping Mask, Layer Style, and Direct.</div>
+                    <div class="video-wrap" onclick="toggleVideo(this)">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="stroke-border.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
                 </div>
-                <div class="feat-item">
-                    <div class="feat-content">
-                        <strong>Band Resizer</strong>
-                        <span>Precisely scale band layers based on target dimensions with long-press averaging.</span>
+                <div class="feat-card">
+                    <div class="feat-card-title">Molecular Weight Marker</div>
+                    <div class="feat-card-desc">Add molecular weight rulers to WB images via manual click or logarithmic spacing mode.</div>
+                    <div class="video-wrap" onclick="toggleVideo(this)">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="mw-marker.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
                 </div>
-                <div class="feat-item">
-                    <div class="feat-content">
-                        <strong>Line Marker</strong>
-                        <span>Add marker lines with customizable position, length, thickness, text labels, and end caps.</span>
+                <div class="feat-card">
+                    <div class="feat-card-title">Batch Merge &amp; Save</div>
+                    <div class="feat-card-desc">Batch process an entire folder of PSD files — merge, flatten, and save as TIFF automatically.</div>
+                    <div class="video-wrap" onclick="toggleVideo(this)">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="batch-merge.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
                 </div>
-                <div class="feat-item">
-                    <div class="feat-content">
-                        <strong>Adv Line Marker</strong>
-                        <span>Advanced multi-row annotation tool with cell merging and per-cell style overrides.</span>
+                <div class="feat-card">
+                    <div class="feat-card-title">Swap Layers</div>
+                    <div class="feat-card-desc">Swap the positions of two selected layers instantly — rearrange blot strips or panels without manual alignment.</div>
+                    <div class="video-wrap" onclick="toggleVideo(this)">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="swap-layers.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
                 </div>
-                <div class="feat-item">
-                    <div class="feat-content">
-                        <strong>MinusPlus Matrix</strong>
-                        <span>Generate plus/minus treatment condition matrices for experimental figures.</span>
+                <div class="feat-card">
+                    <div class="feat-card-title">Vector Lines (Cover Mode)</div>
+                    <div class="feat-card-desc">Generate full-width vector shape lines across blot images — ideal for separating groups or marking regions in Line Marker's Cover mode.</div>
+                    <div class="video-wrap" onclick="toggleVideo(this)">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="vector-lines.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
                 </div>
-                <div class="feat-item">
-                    <div class="feat-content">
-                        <strong>Lane Number &amp; MW Marker</strong>
-                        <span>Add lane numbers and molecular weight markers to blot images.</span>
+                <div class="feat-card">
+                    <div class="feat-card-title">Add Text</div>
+                    <div class="feat-card-desc">Batch-add multiple text layers at once — type all protein names in a single input and place them in one step.</div>
+                    <div class="video-wrap" onclick="toggleVideo(this)">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="add-text.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
                 </div>
+                <div class="feat-card">
+                    <div class="feat-card-title">Rotate &amp; Smart Crop</div>
+                    <div class="feat-card-desc">Straighten a tilted blot and crop white borders in one go — two Quick Action buttons working together.</div>
+                    <div class="video-wrap" onclick="toggleVideo(this)">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="rotate-crop.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+                    </div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-card-title">Toggle Sign + Realign Grid</div>
+                    <div class="feat-card-desc">Generate plus/minus treatment condition matrices, toggle signs, and re-align to grid in one click.</div>
+                    <div class="video-wrap" onclick="toggleVideo(this)">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="toggle-realign.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+                    </div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-card-title">LeftRight Label</div>
+                    <div class="feat-card-desc">Generate protein name and molecular weight labels on both sides of blot images in one step.</div>
+                    <div class="video-wrap" onclick="toggleVideo(this)">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="leftright-label.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+                    </div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-card-title">Copy to All Docs</div>
+                    <div class="feat-card-desc">Copy selected layers into every other open document at once — assemble all sub-figures into one file in seconds.</div>
+                    <div class="video-wrap" onclick="toggleVideo(this)">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="copy-to-all.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+                    </div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-card-title">Phrase Bank</div>
+                    <div class="feat-card-desc">Common phrase library for quickly inserting experiment annotation text.</div>
+                    <div class="video-wrap" onclick="toggleVideo(this)">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="phrase-bank.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+                    </div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-card-title">Adv Line Marker</div>
+                    <div class="feat-card-desc">Advanced multi-row annotation tool with cell merging and per-cell style overrides.</div>
+                    <div class="video-wrap" onclick="toggleVideo(this)">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="adv-line-marker.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+                    </div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-card-title">Band Resizer</div>
+                    <div class="feat-card-desc">Precisely scale band layers based on target dimensions with long-press averaging.</div>
+                    <div class="video-wrap" onclick="toggleVideo(this)">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="band-resizer.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+                    </div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-card-title">Lane Number</div>
+                    <div class="feat-card-desc">Automatically add evenly distributed lane numbers to blot images with customizable prefix and indent.</div>
+                    <div class="video-wrap" onclick="toggleVideo(this)">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="lane-number.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+                    </div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-card-title">Merge Docs (Multiply)</div>
+                    <div class="feat-card-desc">Merge all open documents into one using Multiply blend mode — ideal for combining chemiluminescent and marker images.</div>
+                    <div class="video-wrap" onclick="toggleVideo(this)">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="merge-docs.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+                    </div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-card-title">Copy to Another Doc</div>
+                    <div class="feat-card-desc">Copy selected layers to a specific open document — quickly duplicate annotated panels between figures.</div>
+                    <div class="video-wrap" onclick="toggleVideo(this)">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="copy-to-another.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+                    </div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-card-title">Measure Spacing</div>
+                    <div class="feat-card-desc">Measure distances between layers or guides — useful for checking lane alignment and annotation spacing.</div>
+                    <div class="video-wrap" onclick="toggleVideo(this)">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="measure-spacing.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+                    </div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-card-title">Special Characters</div>
+                    <div class="feat-card-desc">Insert Greek letters and scientific symbols (α, β, γ, ±, °, µ…) directly into text layers with one click.</div>
+                    <div class="video-wrap" onclick="toggleVideo(this)">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="special-chars.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+                    </div>
+                </div>
+        
         </div>
     </div>
 
@@ -376,6 +559,23 @@
     </div>
 </footer>
 
+<script>
+function toggleVideo(wrap) {
+    var video = wrap.querySelector('video');
+    var btn = wrap.querySelector('.play-btn');
+    var playSvg = '<svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>';
+    var pauseSvg = '<svg viewBox="0 0 24 24"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>';
+    if (video.paused) {
+        video.play();
+        wrap.classList.add('playing');
+        btn.innerHTML = pauseSvg;
+    } else {
+        video.pause();
+        wrap.classList.remove('playing');
+        btn.innerHTML = playSvg;
+    }
+}
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 <script>
 document.querySelectorAll('.footer-links a[data-panel]').forEach(function(a){
