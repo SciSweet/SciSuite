@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.4.6",
+    "latestVersion": "1.4.7",
     "downloadUrl": "https://scisuite.cc/imagexi",
-    "releaseNotes": "Fixed a bug where the Smart Split toggle state was not persisted when saving Adv Line Marker presets."
+    "releaseNotes": "Added Curves and Color Balance as new batch adjustment modes."
 }
