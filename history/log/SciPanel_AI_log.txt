@@ -2,3 +2,4 @@ v1.0.0 07/16/2026 The first version of SciPanel_AI.
 v1.0.1 07/28/2026 Fixed \"Check for Updates\" not working.
 v1.0.2 07/30/2026 Changed default Figure Label offset from 0 to 36 pt.
 v1.0.3 08/01/2026 Added "Donate" option to the flyout menu for users who want to support the project via Alipay/WeChat Pay.
+v1.0.4 08/12/2026 Fixed an issue where the nag screen content was clipped on both sides, and the plugin panel could not be resized on Photoshop CC 2019 and later.

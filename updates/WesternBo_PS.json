@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.1.1",
+    "latestVersion": "1.1.2",
     "downloadUrl": "https://scisuite.cc/westernbo",
-    "releaseNotes": "Cover mode in Line Marker section now deletes original layer(s) by default (toggleable)."
+    "releaseNotes": "Fixed an issue where the nag screen content was clipped on both sides, and the plugin panel could not be resized on Photoshop CC 2019 and later."
 }

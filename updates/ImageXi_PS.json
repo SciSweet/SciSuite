@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.4.4",
+    "latestVersion": "1.4.5",
     "downloadUrl": "https://scisuite.cc/imagexi",
-    "releaseNotes": "Fix the preset system."
+    "releaseNotes": "Fixed an issue where the nag screen content was clipped on both sides, and the plugin panel could not be resized on Photoshop CC 2019 and later."
 }

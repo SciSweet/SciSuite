@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.0.3",
+    "latestVersion": "1.0.4",
     "downloadUrl": "https://scisuite.cc/charter",
-    "releaseNotes": "Added \"Donate\" option to the flyout menu for users who want to support the project via Alipay/WeChat Pay."
+    "releaseNotes": "Fixed an issue where the nag screen content was clipped on both sides, and the plugin panel could not be resized on Photoshop CC 2019 and later."
 }

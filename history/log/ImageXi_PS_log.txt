@@ -14,3 +14,4 @@ v1.4.2 08/06/2026 Added the "Remove Rounded Corners" and the "Desaturate" functi
 v1.4.3 08/08/2026 Fix incomplete reset in Scale Bar and Scale Bar (Inset)
                   Add missing smartInsetSpacing field to serializeInsetPresets, fixing Smart Inset spacing not persisting across presets.  
 v1.4.4 08/08/2026 Fix the preset system.
+v1.4.5 08/12/2026 Fixed an issue where the nag screen content was clipped on both sides, and the plugin panel could not be resized on Photoshop CC 2019 and later.
