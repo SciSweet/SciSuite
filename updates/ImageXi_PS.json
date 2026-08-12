@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.4.5",
+    "latestVersion": "1.4.6",
     "downloadUrl": "https://scisuite.cc/imagexi",
-    "releaseNotes": "Fixed an issue where the nag screen content was clipped on both sides, and the plugin panel could not be resized on Photoshop CC 2019 and later."
+    "releaseNotes": "Fixed a bug where the Smart Split toggle state was not persisted when saving Adv Line Marker presets."
 }
