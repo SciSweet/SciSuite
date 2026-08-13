@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.4.7",
+    "latestVersion": "1.4.8",
     "downloadUrl": "https://scisuite.cc/imagexi",
-    "releaseNotes": "Added Curves and Color Balance as new batch adjustment modes."
+    "releaseNotes": "Add Label default colors changed to white text on black background. Circled number preset trimmed to ①–⑩ for font compatibility."
 }
