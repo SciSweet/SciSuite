@@ -11,3 +11,4 @@ v1.3.2 08/06/2026 Added the "Remove Rounded Corners" function. Fix some bugs.
 v1.3.3 08/06/2026 Fix the reset bugs in the two Scale Bar sections.
 v1.3.4 08/12/2026 Fixed an issue where the nag screen content was clipped on both sides, and the plugin panel could not be resized on Photoshop CC 2019 and later.
 v1.3.5 08/13/2026 Add Label default colors changed to white text on black background. Circled number preset trimmed to ①–⑩ for font compatibility.
+v1.3.6 08/13/2026 Fix the group behavior of the Smart Inset function in the Inset section.
