@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.0.4",
+    "latestVersion": "1.2.4",
     "downloadUrl": "https://scisuite.cc/scipanel",
-    "releaseNotes": "Fixed an issue where the nag screen content was clipped on both sides, and the plugin panel could not be resized on Photoshop CC 2019 and later."
+    "releaseNotes": "Detect updates automatically. Fix bugs in preset system and translation."
 }

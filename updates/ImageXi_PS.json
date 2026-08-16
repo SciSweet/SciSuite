@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.4.8",
+    "latestVersion": "1.6.8",
     "downloadUrl": "https://scisuite.cc/imagexi",
-    "releaseNotes": "Add Label default colors changed to white text on black background. Circled number preset trimmed to ①–⑩ for font compatibility."
+    "releaseNotes": "Detect updates automatically. Fix bugs in preset system and translation."
 }
