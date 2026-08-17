@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.3.2",
+    "latestVersion": "1.3.3",
     "downloadUrl": "https://scisuite.cc/westernbo",
-    "releaseNotes": "Detect updates automatically. Fix bugs in preset system and translation."
+    "releaseNotes": "Change the threshold of lane number."
 }
