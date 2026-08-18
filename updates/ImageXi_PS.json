@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.6.8",
+    "latestVersion": "1.6.9",
     "downloadUrl": "https://scisuite.cc/imagexi",
-    "releaseNotes": "Detect updates automatically. Fix bugs in preset system and translation."
+    "releaseNotes": "Fix some minor bugs."
 }

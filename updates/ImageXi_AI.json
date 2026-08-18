@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.6.7",
+    "latestVersion": "1.6.8",
     "downloadUrl": "https://scisuite.cc/imagexi",
-    "releaseNotes": "Added Merge Objects, Batch Merge Objects, Pseudocolor, and Colorize Selection functions. Rearrange the Quick Actions."
+    "releaseNotes": "Fix some minor bugs."
 }
