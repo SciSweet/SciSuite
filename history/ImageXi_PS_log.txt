@@ -20,3 +20,4 @@ v1.4.7 08/12/2026 Added Curves and Color Balance as new batch adjustment modes.
 v1.4.8 08/13/2026 Add Label default colors changed to white text on black background. Circled number preset trimmed to ①–⑩ for font compatibility.
 v1.6.8 08/16/2026 Detect updates automatically. Fix bugs in preset system and translation.
 v1.6.9 08/19/2026 Fix some minor bugs.
+v1.7.0 08/20/2026 Fix some minor bugs.
