@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.2.4",
+    "latestVersion": "1.2.5",
     "downloadUrl": "https://scisuite.cc/charter",
-    "releaseNotes": "Detect updates automatically. Fix bugs in preset system and translation."
+    "releaseNotes": "Fixed an issue where the plugin panel could become unresponsive after minimizing and restoring the Illustrator window."
 }
