@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.7.0",
+    "latestVersion": "1.7.1",
     "downloadUrl": "https://scisuite.cc/imagexi",
-    "releaseNotes": "Fixed an issue where the plugin panel could become unresponsive after minimizing and restoring the Illustrator window."
+    "releaseNotes": "Added Rasterize toggle to Pseudo Color and Colorize Selection right-click menus (default on). Fixed Screen blend mode not working in Merge Objects and Batch Merge Objects when Flatten is off."
 }
