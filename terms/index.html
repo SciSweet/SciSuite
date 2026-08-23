@@ -295,6 +295,7 @@
 <footer class="footer">
     <div class="footer-inner">
         <span class="footer-copy">&copy; 2026 Bo Lv. All rights reserved.</span>
+        <span class="footer-copy" id="visitor-count" style="opacity:0; transition: opacity 0.5s ease;"></span>
         <ul class="footer-links">
             <li><a href="../contact/index.html">Contact</a></li>
             <li><a data-panel="cite">Cite Us</a></li>
@@ -327,6 +328,20 @@ document.querySelectorAll('.footer-links a[data-panel]').forEach(function(a){
                 }, 420); }
     });
 });
+</script>
+<script>
+(function(){
+    fetch('https://countapi.mileshilliard.com/api/v1/hit/scisuite_github_io_visits')
+        .then(function(r){ return r.json(); })
+        .then(function(data){
+            var el = document.getElementById('visitor-count');
+            if(el && data.value){
+                el.textContent = 'Total Visits: ' + Number(data.value).toLocaleString();
+                el.style.opacity = '1';
+            }
+        })
+        .catch(function(){});
+})();
 </script>
 </body>
 </html>
