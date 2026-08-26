@@ -233,6 +233,11 @@
             .feat-item { padding: 16px 18px; }
         }
     </style>
+    <script>
+    (function(){ if(localStorage.getItem('scisuite-lang')==='zh'){
+        document.documentElement.classList.add('i18n-loading');
+    } })();
+    </script>
 </head>
 <body>
 
@@ -243,15 +248,15 @@
         <span>SciPanel</span>
     </a>
     <ul class="nav-mid">
-        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html" data-i18n="nav-home">Home</a></li>
         <!-- <li><a href="../lvlab/home.html">Lv Lab</a></li> -->
         <li><a href="../guidemi/index.html">GuideMi</a></li>
         <li><a href="../westernbo/index.html">WesternBo</a></li>
         <li><a href="../imagexi/index.html">ImageXi</a></li>
         <li><a href="../charter/index.html">ChartEr</a></li>
         <li><a href="../scipanel/index.html" class="active">SciPanel</a></li>
-        <li><a href="../faqs/index.html">FAQs</a></li>
-        <li><a href="../credits/index.html">Credits</a></li>
+        <li><a href="../faqs/index.html" data-i18n="nav-faqs">FAQs</a></li>
+        <li><a href="../credits/index.html" data-i18n="nav-credits">Credits</a></li>
         <li><a href="#" id="tryNowBtn">Try Now</a></li>
     </ul>
     </div>
@@ -260,66 +265,66 @@
 <main style="padding: 0 clamp(20px, 5vw, 48px);"><div class="page-content">
     <div class="plugin-header">
         <h1>SciPanel</h1>
-        <div class="plugin-tagline">Figure Panel Assembly</div>
-        <div class="plugin-platforms"><a href="#" data-plugin="SciPanel" data-platform="PS" class="p-plat ps" style="font-size:12px;padding:5px 10px;" data-tip="Download for Photoshop" download>Ps</a><a href="#" data-plugin="SciPanel" data-platform="AI" class="p-plat ai" style="font-size:12px;padding:5px 10px;" data-tip="Download for Illustrator" download>Ai</a></div>
-        <p class="plugin-overview">SciPanel is a Photoshop/Illustrator CEP plugin focusing on layout, alignment, distribution, and annotation. It helps researchers quickly and accurately organize and annotate figures for scientific publications.</p>
+        <div class="plugin-tagline"><span data-i18n="plugin-tagline">Figure Panel Assembly</span></div>
+        <div class="plugin-platforms"><a href="#" data-plugin="SciPanel" data-platform="PS" class="p-plat ps" style="font-size:12px;padding:5px 10px;" data-tip="Download for Photoshop" data-i18n-tip="dl-tip-ps" download>Ps</a><a href="#" data-plugin="SciPanel" data-platform="AI" class="p-plat ai" style="font-size:12px;padding:5px 10px;" data-tip="Download for Illustrator" data-i18n-tip="dl-tip-ai" download>Ai</a></div>
+        <p class="plugin-overview" data-i18n="plugin-overview">SciPanel is a Photoshop/Illustrator CEP plugin focusing on layout, alignment, distribution, and annotation. It helps researchers quickly and accurately organize and annotate figures for scientific publications.</p>
     </div>
 
     <div class="ui-overview-section">
-        <h2 class="features-title">Interface Overview</h2>
+        <h2 class="features-title"><span data-i18n="sec-interface">Interface Overview</span></h2>
         <img src="ui-overview.svg" alt="SciPanel plugin interface overview">
     </div>
 
     <div class="features-section">
-        <h2 class="features-title">Key Features</h2>
+        <h2 class="features-title"><span data-i18n="sec-features">Key Features</span></h2>
         <div class="feat-grid">
                 <div class="feat-item">
                     <div class="feat-content">
-                        <strong>Better Resize</strong>
-                        <span>Resize layers to nearest guides, match size to a target layer, or resize to exact pixel dimensions.</span>
+                        <strong data-i18n="feat-1-title">Better Resize</strong>
+                        <span data-i18n="feat-1-desc">Resize layers to nearest guides, match size to a target layer, or resize to exact pixel dimensions.</span>
                     </div>
                 </div>
                 <div class="feat-item">
                     <div class="feat-content">
-                        <strong>Better Alignment</strong>
-                        <span>Advanced alignment tools with linked layer group alignment and anchor layer alignment.</span>
+                        <strong data-i18n="feat-2-title">Better Alignment</strong>
+                        <span data-i18n="feat-2-desc">Advanced alignment tools with linked layer group alignment and anchor layer alignment.</span>
                     </div>
                 </div>
                 <div class="feat-item">
                     <div class="feat-content">
-                        <strong>Better Distribution</strong>
-                        <span>Edge, center, top/left, and bottom/right distribution tools.</span>
+                        <strong data-i18n="feat-3-title">Better Distribution</strong>
+                        <span data-i18n="feat-3-desc">Edge, center, top/left, and bottom/right distribution tools.</span>
                     </div>
                 </div>
                 <div class="feat-item">
                     <div class="feat-content">
-                        <strong>Better Move</strong>
-                        <span>8-direction movement, gap mode, guide snapping, and row/column spreading/shrinking.</span>
+                        <strong data-i18n="feat-4-title">Better Move</strong>
+                        <span data-i18n="feat-4-desc">8-direction movement, gap mode, guide snapping, and row/column spreading/shrinking.</span>
                     </div>
                 </div>
                 <div class="feat-item">
                     <div class="feat-content">
-                        <strong>ABC Label</strong>
-                        <span>Batch-add labels to layer groups with automatic layout detection and preset support.</span>
+                        <strong data-i18n="feat-5-title">ABC Label</strong>
+                        <span data-i18n="feat-5-desc">Batch-add labels to layer groups with automatic layout detection and preset support.</span>
                     </div>
                 </div>
                 <div class="feat-item">
                     <div class="feat-content">
-                        <strong>Figure Label</strong>
-                        <span>Add figure labels (e.g. "Figure 1", "Fig. S2") with configurable position and font.</span>
+                        <strong data-i18n="feat-6-title">Figure Label</strong>
+                        <span data-i18n="feat-6-desc">Add figure labels (e.g. "Figure 1", "Fig. S2") with configurable position and font.</span>
                     </div>
                 </div>
                 <div class="feat-item">
                     <div class="feat-content">
-                        <strong>Export Panels</strong>
-                        <span>Export each top-level layer group as PNG, TIFF, JPEG, PSD, or PDF.</span>
+                        <strong data-i18n="feat-7-title">Export Panels</strong>
+                        <span data-i18n="feat-7-desc">Export each top-level layer group as PNG, TIFF, JPEG, PSD, or PDF.</span>
                     </div>
                 </div>
         </div>
     </div>
 
     <div class="pricing-section">
-        <h2 class="features-title">Pricing</h2>
+        <h2 class="features-title"><span data-i18n="sec-pricing">Pricing</span></h2>
         <div class="pricing-table-wrap">
           <table class="pricing-table">
             <colgroup>
@@ -330,10 +335,10 @@
             </colgroup>
             <thead>
               <tr>
-                <th>Platform</th>
-                <th>Future Ph.D.</th>
-                <th>Ph.D.</th>
-                <th>Enterprise</th>
+                <th data-i18n="th-platform">Platform</th>
+                <th data-i18n="th-future-phd">Future Ph.D.</th>
+                <th data-i18n="th-phd">Ph.D.</th>
+                <th data-i18n="th-enterprise">Enterprise</th>
               </tr>
             </thead>
             <tbody>
@@ -352,28 +357,28 @@
             </tbody>
           </table>
         </div>
-        <p class="pricing-note">All licenses are one-time purchases with free minor updates. Ps and Ai versions are sold separately. Each license is tied to a single computer.</p>
+        <p class="pricing-note" data-i18n="pricing-note">All licenses are one-time purchases with free minor updates. Ps and Ai versions are sold separately. Each license is tied to a single computer.</p>
     </div>
 </div></main>
 
 <!-- Footer -->
 <footer class="footer">
     <div class="footer-inner">
-        <span class="footer-copy">&copy; 2026 Bo Lv. All rights reserved.</span>
+        <span class="footer-copy"><span data-i18n="footer-rights">&copy; 2026 Bo Lv. All rights reserved.</span></span>
         <span class="footer-copy" id="visitor-count" style="opacity:0; transition: opacity 0.5s ease;"></span>
         <ul class="footer-links">
-            <li><a href="../contact/index.html">Contact</a></li>
-            <li><a data-panel="cite">Cite Us</a></li>
-            <li><a data-panel="join">Join Us</a></li>
-            <li><a href="../terms/index.html">Terms</a></li>
-            <li><a href="../privacy/index.html">Privacy</a></li>
+            <li><a href="../contact/index.html" data-i18n="footer-contact">Contact</a></li>
+            <li><a data-panel="cite" data-i18n="footer-cite">Cite Us</a></li>
+            <li><a data-panel="join" data-i18n="footer-join">Join Us</a></li>
+            <li><a href="../terms/index.html" data-i18n="footer-terms">Terms</a></li>
+            <li><a href="../privacy/index.html" data-i18n="footer-privacy">Privacy</a></li>
         </ul>
     </div>
     <div class="footer-panel" id="panel-cite">
-        <p>Cite the plugins for your legends and Materials &amp; Methods sections:<br><em>Figures were prepared with SciSuite plugins (GuideMi, WesternBo, ImageXi, ChartEr, and SciPanel).</em></p>
+        <p><span data-i18n="footer-cite-text">Cite the plugins for your legends and Materials &amp; Methods sections:<br><em>Figures were prepared with SciSuite plugins (GuideMi, WesternBo, ImageXi, ChartEr, and SciPanel).</em></span></p>
     </div>
     <div class="footer-panel" id="panel-join">
-        <p>We welcome contributions of all kinds — feature ideas, bug reports, translations, or code. Please contact us (contact@scisuite.cc) if you would like to contribute to this project. Significant contributors will be credited as developers.</p>
+        <p><span data-i18n="footer-join-text">We welcome contributions of all kinds — feature ideas, bug reports, translations, or code. Please contact us (contact@scisuite.cc) if you would like to contribute to this project. Significant contributors will be credited as developers.</span></p>
     </div>
 </footer>
 
@@ -465,5 +470,6 @@ document.getElementById('tryNowBtn').addEventListener('click', function(e){
         .catch(function(){});
 })();
 </script>
+<script src="../lang/i18n.js" data-json="../lang/scipanel-zh.json"></script>
 </body>
 </html>

@@ -176,6 +176,11 @@
             .credit-card { padding: 18px; }
         }
     </style>
+    <script>
+    (function(){ if(localStorage.getItem('scisuite-lang')==='zh'){
+        document.documentElement.classList.add('i18n-loading');
+    } })();
+    </script>
 </head>
 <body>
 
@@ -210,28 +215,28 @@
         </svg>
     </a>
     <ul class="nav-mid">
-        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html" data-i18n="nav-home">Home</a></li>
         <!-- <li><a href="../lvlab/home.html">Lv Lab</a></li> -->
         <li><a href="../guidemi/index.html">GuideMi</a></li>
         <li><a href="../westernbo/index.html">WesternBo</a></li>
         <li><a href="../imagexi/index.html">ImageXi</a></li>
         <li><a href="../charter/index.html">ChartEr</a></li>
         <li><a href="../scipanel/index.html">SciPanel</a></li>
-        <li><a href="../faqs/index.html">FAQs</a></li>
+        <li><a href="../faqs/index.html" data-i18n="nav-faqs">FAQs</a></li>
         <li><a href="../credits/index.html" class="active">Credits</a></li>
-        <li><a href="../index.html#download">Try Now</a></li>
+        <li><a href="../index.html#download" data-i18n="nav-trynow">Try Now</a></li>
     </ul>
     </div>
 </nav>
 
 <main style="padding: 0 clamp(20px, 5vw, 48px);"><div class="page-content">
     <div class="page-header">
-        <h1>Credits</h1>
+        <h1 data-i18n="header-title">Credits</h1>
     </div>
 
     <!-- Core Developers -->
     <div class="credits-section">
-        <h2 class="credits-section-title">Core Developers</h2>
+        <h2 class="credits-section-title"><span data-i18n="sec-core">Core Developers</span></h2>
         <div class="credits-grid">
             <div class="credit-card">
                 <div class="credit-avatar">BL</div>
@@ -263,7 +268,7 @@
 
     <!-- Contributors -->
     <div class="credits-section">
-        <h2 class="credits-section-title">Contributors</h2>
+        <h2 class="credits-section-title"><span data-i18n="sec-contrib">Contributors</span></h2>
         <div class="credits-grid">
             <div class="credit-card">
                 <div class="credit-avatar">PC</div>
@@ -283,15 +288,15 @@
             </div>
         </div>
         <div class="credits-empty" style="margin-top: 12px;">
-            <p>This could be you! We welcome contributions of all kinds — feature ideas, bug reports, translations, or code.<br>Get in touch via <a href="../contact/index.html" style="color:var(--c-accent-light);">Contact</a> to get started.</p>
+            <p><span data-i18n="contrib-cta">This could be you! We welcome contributions of all kinds — feature ideas, bug reports, translations, or code.</span><br>Get in touch via <a href="../contact/index.html" style="color:var(--c-accent-light);">Contact</a> to get started.</p>
         </div>
     </div>
 
     <!-- Sponsors -->
     <div class="credits-section">
-        <h2 class="credits-section-title">Sponsors</h2>
+        <h2 class="credits-section-title"><span data-i18n="sec-sponsors">Sponsors</span></h2>
         <div class="credits-empty">
-            <p>SciSuite is priced affordably because we understand researchers are often on tight budgets — and the unlimited free trial means many users never pay at all. As a result, revenue alone doesn't cover the ongoing costs of development, testing, and maintenance. If your lab, institution, or company finds SciSuite useful and would like to help keep it going, please consider sponsoring the project. <a href="../contact/index.html" style="color:var(--c-accent-light);">Reach out to Bo</a> to learn more.</p>
+            <p data-i18n="sponsors-desc">SciSuite is priced affordably because we understand researchers are often on tight budgets — and the unlimited free trial means many users never pay at all. As a result, revenue alone doesn't cover the ongoing costs of development, testing, and maintenance. If your lab, institution, or company finds SciSuite useful and would like to help keep it going, please consider sponsoring the project. <a href="../contact/index.html" style="color:var(--c-accent-light);">Reach out to Bo</a> to learn more.</p>
         </div>
         <!-- When you have sponsors, replace the empty block above with:
         <div class="credits-grid">
@@ -312,21 +317,21 @@
 <!-- Footer -->
 <footer class="footer">
     <div class="footer-inner">
-        <span class="footer-copy">&copy; 2026 Bo Lv. All rights reserved.</span>
+        <span class="footer-copy"><span data-i18n="footer-rights">&copy; 2026 Bo Lv. All rights reserved.</span></span>
         <span class="footer-copy" id="visitor-count" style="opacity:0; transition: opacity 0.5s ease;"></span>
         <ul class="footer-links">
-            <li><a href="../contact/index.html">Contact</a></li>
-            <li><a data-panel="cite">Cite Us</a></li>
-            <li><a data-panel="join">Join Us</a></li>
-            <li><a href="../terms/index.html">Terms</a></li>
-            <li><a href="../privacy/index.html">Privacy</a></li>
+            <li><a href="../contact/index.html" data-i18n="footer-contact">Contact</a></li>
+            <li><a data-panel="cite" data-i18n="footer-cite">Cite Us</a></li>
+            <li><a data-panel="join" data-i18n="footer-join">Join Us</a></li>
+            <li><a href="../terms/index.html" data-i18n="footer-terms">Terms</a></li>
+            <li><a href="../privacy/index.html" data-i18n="footer-privacy">Privacy</a></li>
         </ul>
     </div>
     <div class="footer-panel" id="panel-cite">
-        <p>Cite the plugins for your legends and Materials &amp; Methods sections:<br><em>Figures were prepared with SciSuite plugins (GuideMi, WesternBo, ImageXi, ChartEr, and SciPanel).</em></p>
+        <p><span data-i18n="footer-cite-text">Cite the plugins for your legends and Materials &amp; Methods sections:<br><em>Figures were prepared with SciSuite plugins (GuideMi, WesternBo, ImageXi, ChartEr, and SciPanel).</em></span></p>
     </div>
     <div class="footer-panel" id="panel-join">
-        <p>We welcome contributions of all kinds: feature ideas, bug reports, translations, or code. Please contact us (contact@scisuite.cc) if you would like to contribute to this project. Significant contributors will be credited as developers.</p>
+        <p><span data-i18n="footer-join-text">We welcome contributions of all kinds: feature ideas, bug reports, translations, or code. Please contact us (contact@scisuite.cc) if you would like to contribute to this project. Significant contributors will be credited as developers.</span></p>
     </div>
 </footer>
 
@@ -368,5 +373,6 @@ document.querySelectorAll('a[data-panel]').forEach(function(a){
         .catch(function(){});
 })();
 </script>
+<script src="../lang/i18n.js" data-json="../lang/credits-zh.json"></script>
 </body>
 </html>

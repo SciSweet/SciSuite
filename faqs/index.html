@@ -169,6 +169,11 @@
             .faq-item.open .faq-a { padding: 0 18px 16px; }
         }
     </style>
+    <script>
+    (function(){ if(localStorage.getItem('scisuite-lang')==='zh'){
+        document.documentElement.classList.add('i18n-loading');
+    } })();
+    </script>
 </head>
 <body>
 
@@ -203,7 +208,7 @@
         </svg>
     </a>
     <ul class="nav-mid">
-        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html" data-i18n="nav-home">Home</a></li>
         <!-- <li><a href="../lvlab/home.html">Lv Lab</a></li> -->
         <li><a href="../guidemi/index.html">GuideMi</a></li>
         <li><a href="../westernbo/index.html">WesternBo</a></li>
@@ -211,16 +216,16 @@
         <li><a href="../charter/index.html">ChartEr</a></li>
         <li><a href="../scipanel/index.html">SciPanel</a></li>
         <li><a href="../faqs/index.html" class="active">FAQs</a></li>
-        <li><a href="../credits/index.html">Credits</a></li>
-        <li><a href="../index.html#download">Try Now</a></li>
+        <li><a href="../credits/index.html" data-i18n="nav-credits">Credits</a></li>
+        <li><a href="../index.html#download" data-i18n="nav-trynow">Try Now</a></li>
     </ul>
     </div>
 </nav>
 
 <main style="padding: 0 clamp(20px, 5vw, 48px);"><div class="page-content">
     <div class="page-header">
-        <h1>FAQs</h1>
-        <p>Frequently asked questions about SciSuite plugins. Can't find your answer? Feel free to contact us.</p>
+        <h1 data-i18n="header-title">FAQs</h1>
+        <p data-i18n="header-desc">Frequently asked questions about SciSuite plugins. Can't find your answer? Feel free to contact us.</p>
     </div>
 
     <div class="faq-list">
@@ -228,14 +233,14 @@
         <!-- FAQ 1 — China payment methods -->
         <div class="faq-item">
             <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-                <span class="faq-label">Q1:</span>
-                <span class="faq-text">I don't have access to international credit/debit cards (Visa, Mastercard, etc.), Apple Pay, or Google Pay. Are there alternative payment methods available for purchasing SciSuite?</span>
+                <span class="faq-label" data-i18n="q1-label">Q1:</span>
+                <span class="faq-text"><span data-i18n="q1">I don't have access to international credit/debit cards (Visa, Mastercard, etc.), Apple Pay, or Google Pay. Are there alternative payment methods available for purchasing SciSuite?</span></span>
                 <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
             <div class="faq-a">
                 <div class="faq-a-inner">
-                    <span class="faq-label">A1:</span>
-                    <p>SciSuite's payment platform (Creem) accepts international credit/debit cards (Visa, Mastercard, etc.), Apple Pay, Google Pay, and <strong>Alipay</strong> (available for one-time purchases). The checkout page automatically displays the payment methods available in your region.<br><br>WeChat Pay and UnionPay are not yet supported. If you don't have access to any of the above payment methods, please email us at <a href="mailto:contact@scisuite.cc" style="color:var(--c-accent-light);">contact@scisuite.cc</a>. We can process your purchase manually and issue a license key on your behalf.</p>
+                    <span class="faq-label" data-i18n="a1-label">A1:</span>
+                    <p data-i18n="a1">SciSuite's payment platform (Creem) accepts international credit/debit cards (Visa, Mastercard, etc.), Apple Pay, Google Pay, and <strong>Alipay</strong> (available for one-time purchases). The checkout page automatically displays the payment methods available in your region.<br><br>WeChat Pay and UnionPay are not yet supported. If you don't have access to any of the above payment methods, please email us at <a href="mailto:contact@scisuite.cc" style="color:var(--c-accent-light);">contact@scisuite.cc</a>. We can process your purchase manually and issue a license key on your behalf.</p>
                 </div>
             </div>
         </div>
@@ -243,14 +248,14 @@
         <!-- FAQ 2 -->
         <div class="faq-item">
             <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-                <span class="faq-label">Q2:</span>
-                <span class="faq-text">What versions of Photoshop and Illustrator are supported?</span>
+                <span class="faq-label" data-i18n="q2-label">Q2:</span>
+                <span class="faq-text"><span data-i18n="q2">What versions of Photoshop and Illustrator are supported?</span></span>
                 <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
             <div class="faq-a">
                 <div class="faq-a-inner">
-                    <span class="faq-label">A2:</span>
-                    <p>SciSuite plugins require Adobe Photoshop CC 2022 or later and Adobe Illustrator CC 2022 or later. Both Windows and macOS are fully supported. On Apple Silicon Macs (M1 and later), the Adobe application needs to be launched in Rosetta mode — see the <a href="../install/index.html" style="color:var(--c-accent-light);">Installation Guide</a> for details.</p>
+                    <span class="faq-label" data-i18n="a1-label">A1:</span>
+                    <p data-i18n="a1">SciSuite plugins require Adobe Photoshop CC 2022 or later and Adobe Illustrator CC 2022 or later. Both Windows and macOS are fully supported. On Apple Silicon Macs (M1 and later), the Adobe application needs to be launched in Rosetta mode — see the <a href="../install/index.html" style="color:var(--c-accent-light);">Installation Guide</a> for details.</p>
                 </div>
             </div>
         </div>
@@ -258,84 +263,84 @@
         <!-- Add more FAQ items here by copying the block below -->
         <div class="faq-item">
             <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-                <span class="faq-label">Q3:</span>
-                <span class="faq-text">Photoshop is a raster editor. How can SciSuite output be "vector-based"?</span>
+                <span class="faq-label" data-i18n="q3-label">Q3:</span>
+                <span class="faq-text"><span data-i18n="q3">Photoshop is a raster editor. How can SciSuite output be "vector-based"?</span></span>
                 <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
             <div class="faq-a">
                 <div class="faq-a-inner">
-                    <span class="faq-label">A3:</span>
-                    <p>Although Photoshop is primarily a raster image editor, it fully supports vector Shape Layers and Type Layers. SciSuite takes advantage of this: all annotations it generates, including scale bars, stroke borders, line markers, significance marks, tables, dimension markers, and labels, are created as Photoshop Shape Layers (vector paths with fill/stroke), not rasterized pixels. These shapes remain resolution-independent inside the PSD and stay crisp at any zoom level. When you export to PDF, the vector data is preserved; when you export to PNG or TIFF, Photoshop rasterizes them at the document's full resolution, so they are always sharp. This is the same reason fonts in Photoshop look clean at every size, because they are vector too.</p>
+                    <span class="faq-label" data-i18n="a1-label">A1:</span>
+                    <p data-i18n="a1">Although Photoshop is primarily a raster image editor, it fully supports vector Shape Layers and Type Layers. SciSuite takes advantage of this: all annotations it generates, including scale bars, stroke borders, line markers, significance marks, tables, dimension markers, and labels, are created as Photoshop Shape Layers (vector paths with fill/stroke), not rasterized pixels. These shapes remain resolution-independent inside the PSD and stay crisp at any zoom level. When you export to PDF, the vector data is preserved; when you export to PNG or TIFF, Photoshop rasterizes them at the document's full resolution, so they are always sharp. This is the same reason fonts in Photoshop look clean at every size, because they are vector too.</p>
                 </div>
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-                <span class="faq-label">Q4:</span>
-                <span class="faq-text">How many computers can I install a single license on?</span>
+                <span class="faq-label" data-i18n="q4-label">Q4:</span>
+                <span class="faq-text"><span data-i18n="q4">How many computers can I install a single license on?</span></span>
                 <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
             <div class="faq-a">
                 <div class="faq-a-inner">
-                    <span class="faq-label">A4:</span>
-                    <p>Each license is tied to a single computer. If you need to use SciSuite on more than one machine, a separate license is required for each.<br><br>That said, transferring a license to a new computer is easy. On your current machine, open the plugin's flyout menu and select <strong>Deactivate License</strong>. This frees up your license key so you can reactivate it on your new computer.</p>
+                    <span class="faq-label" data-i18n="a1-label">A1:</span>
+                    <p data-i18n="a1">Each license is tied to a single computer. If you need to use SciSuite on more than one machine, a separate license is required for each.<br><br>That said, transferring a license to a new computer is easy. On your current machine, open the plugin's flyout menu and select <strong>Deactivate License</strong>. This frees up your license key so you can reactivate it on your new computer.</p>
                 </div>
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-                <span class="faq-label">Q5:</span>
-                <span class="faq-text">Is there a free trial?</span>
+                <span class="faq-label" data-i18n="q5-label">Q5:</span>
+                <span class="faq-text"><span data-i18n="q5">Is there a free trial?</span></span>
                 <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
             <div class="faq-a">
                 <div class="faq-a-inner">
-                    <span class="faq-label">A5:</span>
-                    <p>Yes. Every plugin comes with a one-month free trial with full functionality, no credit card required. This gives you plenty of time to evaluate whether it fits your workflow before purchasing.</p>
+                    <span class="faq-label" data-i18n="a1-label">A1:</span>
+                    <p data-i18n="a1">Yes. Every plugin comes with a one-month free trial with full functionality, no credit card required. This gives you plenty of time to evaluate whether it fits your workflow before purchasing.</p>
                 </div>
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-                <span class="faq-label">Q6:</span>
-                <span class="faq-text">Is SciSuite a one-time purchase or a subscription?</span>
+                <span class="faq-label" data-i18n="q6-label">Q6:</span>
+                <span class="faq-text"><span data-i18n="q6">Is SciSuite a one-time purchase or a subscription?</span></span>
                 <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
             <div class="faq-a">
                 <div class="faq-a-inner">
-                    <span class="faq-label">A6:</span>
-                    <p>SciSuite is a one-time purchase with no recurring fees. Once you buy a license, it's yours to keep.</p>
+                    <span class="faq-label" data-i18n="a1-label">A1:</span>
+                    <p data-i18n="a1">SciSuite is a one-time purchase with no recurring fees. Once you buy a license, it's yours to keep.</p>
                 </div>
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-                <span class="faq-label">Q7:</span>
-                <span class="faq-text">Are updates included after purchase?</span>
+                <span class="faq-label" data-i18n="q7-label">Q7:</span>
+                <span class="faq-text"><span data-i18n="q7">Are updates included after purchase?</span></span>
                 <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
             <div class="faq-a">
                 <div class="faq-a-inner">
-                    <span class="faq-label">A7:</span>
-                    <p>All minor version updates (bug fixes, small improvements) are free for the lifetime of your license. Major version upgrades, which introduce significant new features or architectural changes, require a separate purchase. That said, SciSuite is Bo's part-time project, so major version releases are not expected in the near future, so you can count on getting free updates for a long time.<br><br>Looking ahead, SciSuite is currently built on Adobe's CEP (Common Extensibility Platform), which is being phased out in favor of UXP (Unified Extensibility Platform). If the paid user base grows large enough to cover the development costs, and UXP matures to the point where it can support a project as complex as SciSuite, I plan to rebuild SciSuite on UXP. A UXP version would be released as a major upgrade.</p>
+                    <span class="faq-label" data-i18n="a1-label">A1:</span>
+                    <p data-i18n="a1">All minor version updates (bug fixes, small improvements) are free for the lifetime of your license. Major version upgrades, which introduce significant new features or architectural changes, require a separate purchase. That said, SciSuite is Bo's part-time project, so major version releases are not expected in the near future, so you can count on getting free updates for a long time.<br><br>Looking ahead, SciSuite is currently built on Adobe's CEP (Common Extensibility Platform), which is being phased out in favor of UXP (Unified Extensibility Platform). If the paid user base grows large enough to cover the development costs, and UXP matures to the point where it can support a project as complex as SciSuite, I plan to rebuild SciSuite on UXP. A UXP version would be released as a major upgrade.</p>
                 </div>
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-                <span class="faq-label">Q8:</span>
-                <span class="faq-text">When installing via Anastasiy's Extension Manager, I get "There is already an extension installed with that name. Please uninstall it first and then try again." or "No Adobe applications found for that extension. Please reinstall Adobe software and restart Anastasiy's Extension Manager." How do I fix this?</span>
+                <span class="faq-label" data-i18n="q8-label">Q8:</span>
+                <span class="faq-text"><span data-i18n="q8">When installing via Anastasiy's Extension Manager, I get "There is already an extension installed with that name. Please uninstall it first and then try again." or "No Adobe applications found for that extension. Please reinstall Adobe software and restart Anastasiy's Extension Manager." How do I fix this?</span></span>
                 <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
             <div class="faq-a">
                 <div class="faq-a-inner">
-                    <span class="faq-label">A8:</span>
-                    <p><strong>"There is already an extension installed with that name"</strong> — This means a previous version of the same plugin is already on your computer, likely installed earlier through a different ZXP installer or by manually copying files. To resolve it, remove the old copy first: open Anastasiy's Extension Manager and check whether the plugin appears in the installed list — if it does, uninstall it from there. If it does not appear, the old files were probably installed manually; navigate to your CEP extensions folder (see the paths listed in the <a href="../install/index.html" style="color:var(--c-accent-light);">Installation Guide</a>, Method 2, Step 3) and delete the plugin's folder. If you cannot locate the folder, use a file search tool such as <a href="https://www.voidtools.com/" target="_blank" rel="noopener" style="color:var(--c-accent-light);">Everything</a> to search for the plugin's folder name. After removing the old version, retry the installation.<br><br><strong>"No Adobe applications found for that extension"</strong> — This usually means the Extension Manager cannot detect a compatible Adobe application on your system. First, make sure you have Adobe Photoshop CC 2022 (or later) or Adobe Illustrator CC 2022 (or later) installed, then restart Anastasiy's Extension Manager and try again.<br><br>If the steps above do not resolve either error, your Adobe software may have been installed in a non-standard way (e.g. not through Adobe Creative Cloud). Some third-party or unofficial Adobe installers strip out the CEP extension framework and other components that plugins depend on. In this case, we recommend downloading and installing the official version of Photoshop or Illustrator directly from <a href="https://creativecloud.adobe.com/apps" target="_blank" rel="noopener" style="color:var(--c-accent-light);">Adobe Creative Cloud</a>, and then retrying the plugin installation.</p>
+                    <span class="faq-label" data-i18n="a1-label">A1:</span>
+                    <p data-i18n="a1"><strong>"There is already an extension installed with that name"</strong> — This means a previous version of the same plugin is already on your computer, likely installed earlier through a different ZXP installer or by manually copying files. To resolve it, remove the old copy first: open Anastasiy's Extension Manager and check whether the plugin appears in the installed list — if it does, uninstall it from there. If it does not appear, the old files were probably installed manually; navigate to your CEP extensions folder (see the paths listed in the <a href="../install/index.html" style="color:var(--c-accent-light);">Installation Guide</a>, Method 2, Step 3) and delete the plugin's folder. If you cannot locate the folder, use a file search tool such as <a href="https://www.voidtools.com/" target="_blank" rel="noopener" style="color:var(--c-accent-light);">Everything</a> to search for the plugin's folder name. After removing the old version, retry the installation.<br><br><strong>"No Adobe applications found for that extension"</strong> — This usually means the Extension Manager cannot detect a compatible Adobe application on your system. First, make sure you have Adobe Photoshop CC 2022 (or later) or Adobe Illustrator CC 2022 (or later) installed, then restart Anastasiy's Extension Manager and try again.<br><br>If the steps above do not resolve either error, your Adobe software may have been installed in a non-standard way (e.g. not through Adobe Creative Cloud). Some third-party or unofficial Adobe installers strip out the CEP extension framework and other components that plugins depend on. In this case, we recommend downloading and installing the official version of Photoshop or Illustrator directly from <a href="https://creativecloud.adobe.com/apps" target="_blank" rel="noopener" style="color:var(--c-accent-light);">Adobe Creative Cloud</a>, and then retrying the plugin installation.</p>
                 </div>
             </div>
         </div>
@@ -344,14 +349,14 @@
         <!--
         <div class="faq-item">
             <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-                <span class="faq-label">Q9:</span>
-                <span class="faq-text">Your question here?</span>
+                <span class="faq-label" data-i18n="q9-label">Q9:</span>
+                <span class="faq-text"><span data-i18n="q9">Your question here?</span></span>
                 <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
             <div class="faq-a">
                 <div class="faq-a-inner">
-                    <span class="faq-label">A9:</span>
-                    <p>Your answer here.</p>
+                    <span class="faq-label" data-i18n="a1-label">A1:</span>
+                    <p data-i18n="a1">Your answer here.</p>
                 </div>
             </div>
         </div>
@@ -363,21 +368,21 @@
 <!-- Footer -->
 <footer class="footer">
     <div class="footer-inner">
-        <span class="footer-copy">&copy; 2026 Bo Lv. All rights reserved.</span>
+        <span class="footer-copy"><span data-i18n="footer-rights">&copy; 2026 Bo Lv. All rights reserved.</span></span>
         <span class="footer-copy" id="visitor-count" style="opacity:0; transition: opacity 0.5s ease;"></span>
         <ul class="footer-links">
-            <li><a href="../contact/index.html">Contact</a></li>
-            <li><a data-panel="cite">Cite Us</a></li>
-            <li><a data-panel="join">Join Us</a></li>
-            <li><a href="../terms/index.html">Terms</a></li>
-            <li><a href="../privacy/index.html">Privacy</a></li>
+            <li><a href="../contact/index.html" data-i18n="footer-contact">Contact</a></li>
+            <li><a data-panel="cite" data-i18n="footer-cite">Cite Us</a></li>
+            <li><a data-panel="join" data-i18n="footer-join">Join Us</a></li>
+            <li><a href="../terms/index.html" data-i18n="footer-terms">Terms</a></li>
+            <li><a href="../privacy/index.html" data-i18n="footer-privacy">Privacy</a></li>
         </ul>
     </div>
     <div class="footer-panel" id="panel-cite">
-        <p>Cite the plugins for your legends and Materials &amp; Methods sections:<br><em>Figures were prepared with SciSuite plugins (GuideMi, WesternBo, ImageXi, ChartEr, and SciPanel).</em></p>
+        <p><span data-i18n="footer-cite-text">Cite the plugins for your legends and Materials &amp; Methods sections:<br><em>Figures were prepared with SciSuite plugins (GuideMi, WesternBo, ImageXi, ChartEr, and SciPanel).</em></span></p>
     </div>
     <div class="footer-panel" id="panel-join">
-        <p>We welcome contributions of all kinds: feature ideas, bug reports, translations, or code. Please contact us (contact@scisuite.cc) if you would like to contribute to this project. Significant contributors will be credited as developers.</p>
+        <p><span data-i18n="footer-join-text">We welcome contributions of all kinds: feature ideas, bug reports, translations, or code. Please contact us (contact@scisuite.cc) if you would like to contribute to this project. Significant contributors will be credited as developers.</span></p>
     </div>
 </footer>
 
@@ -412,5 +417,6 @@ document.querySelectorAll('.footer-links a[data-panel]').forEach(function(a){
         .catch(function(){});
 })();
 </script>
+<script src="../lang/i18n.js" data-json="../lang/faqs-zh.json"></script>
 </body>
 </html>

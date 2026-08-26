@@ -114,7 +114,7 @@
             padding: 18px 28px; cursor: pointer; user-select: none;
         }
         .faq-label {
-            flex-shrink: 0; width: 32px;
+            flex-shrink: 0; width: 80px;
             font-size: 14px; font-weight: 700; color: var(--c-accent-light); line-height: 1.5;
         }
         .faq-q .faq-text {
@@ -235,29 +235,29 @@
         <!-- Method 1: ZXP Installer -->
         <div class="faq-item open">
             <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-                <span class="faq-label">M1:</span>
+                <span class="faq-label" data-i18n="m1-label">Method 1:</span>
                 <span class="faq-text" data-i18n="m1-title">Install via ZXP Installer</span>
                 <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
             <div class="faq-a">
                 <div class="faq-a-inner">
-                    <span class="faq-label">S1:</span>
+                    <span class="faq-label" data-i18n="m1-s1-label">Step 1:</span>
                     <p data-i18n="m1-s1"><strong>Close Adobe applications.</strong> Quit Photoshop and/or Illustrator if they are currently running. Installing while the host app is open may cause the installation to fail.</p>
                 </div>
                 <div class="faq-a-inner">
-                    <span class="faq-label">S2:</span>
+                    <span class="faq-label" data-i18n="m1-s2-label">Step 2:</span>
                     <p data-i18n="m1-s2"><strong>Enable developer mode for CEP extensions (one-time setup).</strong> SciSuite plugins are self-signed, so Adobe requires developer mode to be enabled before they can run.<br><br><strong>Windows (quick):</strong> Download <a href="EnableCEPDevMode.zip" download style="color:var(--c-accent-light);">EnableCEPDevMode.zip</a>, extract it, double-click the EnableCEPDevMode.reg file inside (DisableCEPDevMode.reg is for closing the developer mode.), and click "Yes" when prompted.<br><br><strong>Windows (manual):</strong> Press Win+R, type regedit and press Enter. Navigate to HKEY_CURRENT_USER\SOFTWARE\Adobe\CSXS.11 (create the key if it doesn't exist), create a new String Value named PlayerDebugMode and set its value to 1. Repeat for CSXS.9, CSXS.10, and CSXS.12 to cover all versions.<br><br><strong>macOS (quick):</strong> Download <a href="EnableCEPDevMode_macOS.zip" download style="color:var(--c-accent-light);">EnableCEPDevMode_macOS.zip</a>, extract it, open Terminal, drag the EnableCEPDevMode.sh file into the Terminal window and press Enter. (DisableCEPDevMode.sh is included for closing the developer mode.)<br><br><strong>macOS (manual):</strong> Open Terminal (Applications &gt; Utilities &gt; Terminal) and run the following commands:<br><span style="display:block;padding-left:2em;margin-top:4px;font-family:'Courier New',Courier,monospace;font-size:12.5px;color:var(--c-text);">defaults write com.adobe.CSXS.9 PlayerDebugMode 1<br>defaults write com.adobe.CSXS.10 PlayerDebugMode 1<br>defaults write com.adobe.CSXS.11 PlayerDebugMode 1<br>defaults write com.adobe.CSXS.12 PlayerDebugMode 1</span></p>
                 </div>
                 <div class="faq-a-inner">
-                    <span class="faq-label">S3:</span>
+                    <span class="faq-label" data-i18n="m1-s3-label">Step 3:</span>
                     <p data-i18n="m1-s3"><strong>Download &amp; install a ZXP installer.</strong> Any of the following will work: <a href="https://install.anastasiy.com/" target="_blank" rel="noopener" style="color:var(--c-accent-light);">Anastasiy's Extension Manager</a> (recommended — supports drag-and-drop, managing, and uninstalling extensions), <a href="https://aescripts.com/learn/post/zxp-installer" target="_blank" rel="noopener" style="color:var(--c-accent-light);">aescripts ZXP/UXP Installer</a> (free, lightweight), or <a href="https://zxpinstaller.com/" target="_blank" rel="noopener" style="color:var(--c-accent-light);">ZXPInstaller</a> (supports drag-and-drop, but does not support managing or uninstalling extensions).</p>
                 </div>
                 <div class="faq-a-inner">
-                    <span class="faq-label">S4:</span>
+                    <span class="faq-label" data-i18n="m1-s4-label">Step 4:</span>
                     <p data-i18n="m1-s4"><strong>Load the .zxp file into the installer.</strong> Drag the .zxp file into the installer window, or use the File menu to browse and select it (depending on which installer you chose).</p>
                 </div>
                 <div class="faq-a-inner">
-                    <span class="faq-label">S5:</span>
+                    <span class="faq-label" data-i18n="m1-s5-label">Step 5:</span>
                     <p data-i18n="m1-s5"><strong>Launch Photoshop or Illustrator.</strong> Open the host application. The plugin should now appear under <strong>Window &gt; Extensions</strong>. If it does not appear, try restarting your computer.<br><br><strong>macOS with Apple Silicon (M-series chip):</strong> In the Applications folder, right-click the Adobe app and select <strong>Get Info</strong>. Check <strong>Open using Rosetta</strong>, then relaunch the app. Intel-based Macs do not need this step.</p>
                 </div>
             </div>
@@ -266,25 +266,25 @@
         <!-- Method 2: Manual Installation -->
         <div class="faq-item open">
             <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-                <span class="faq-label">M2:</span>
+                <span class="faq-label" data-i18n="m2-label">Method 2:</span>
                 <span class="faq-text" data-i18n="m2-title">Install via Manual File Placement (Works with any Adobe installation)</span>
                 <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
             <div class="faq-a">
                 <div class="faq-a-inner">
-                    <span class="faq-label">S1:</span>
+                    <span class="faq-label" data-i18n="m2-s1-label">Step 1:</span>
                     <p data-i18n="m2-s1"><strong>Enable developer mode</strong> if you haven't already (see Method 1, Step 2 above).</p>
                 </div>
                 <div class="faq-a-inner">
-                    <span class="faq-label">S2:</span>
+                    <span class="faq-label" data-i18n="m2-s2-label">Step 2:</span>
                     <p data-i18n="m2-s2"><strong>Rename and extract.</strong> Change the .zxp file extension to .zip, then extract it with any archive tool. Make sure the extracted folder contains the CSXS folder (with manifest.xml inside) at its top level, not nested in an extra subfolder.</p>
                 </div>
                 <div class="faq-a-inner">
-                    <span class="faq-label">S3:</span>
+                    <span class="faq-label" data-i18n="m2-s3-label">Step 3:</span>
                     <p data-i18n="m2-s3"><strong>Copy the folder to the extensions directory.</strong><br><br><strong>Windows:</strong><br><span style="display:block;padding-left:2em;margin-top:4px;">C:\Program Files (x86)\Common Files\Adobe\CEP\extensions\ (system-level, may require administrator permission)<br>C:\Users\&lt;your username&gt;\AppData\Roaming\Adobe\CEP\extensions\ (user-level, no admin needed; create the folders if they don't exist)</span><br><strong>macOS:</strong><br><span style="display:block;padding-left:2em;margin-top:4px;">/Library/Application Support/Adobe/CEP/extensions/ (system-level, may require administrator permission)<br>~/Library/Application Support/Adobe/CEP/extensions/ (user-level; create the folders if they don't exist. To access the user Library folder, hold Option and click Go &gt; Library in Finder)</span></p>
                 </div>
                 <div class="faq-a-inner">
-                    <span class="faq-label">S4:</span>
+                    <span class="faq-label" data-i18n="m2-s4-label">Step 4:</span>
                     <p data-i18n="m2-s4"><strong>Launch Photoshop or Illustrator.</strong> The plugin should now appear under <strong>Window &gt; Extensions</strong>.<br><br><strong>macOS with Apple Silicon (M-series chip):</strong> In the Applications folder, right-click the Adobe app and select <strong>Get Info</strong>. Check <strong>Open using Rosetta</strong>, then relaunch the app. Intel-based Macs do not need this step.</p>
                 </div>
             </div>
@@ -300,7 +300,7 @@
             </div>
             <div class="faq-a">
                 <div class="faq-a-inner">
-                    <span class="faq-label">S1:</span>
+                    <span class="faq-label" data-i18n="m2-s1-label">Step 1:</span>
                     <p>Step content here.</p>
                 </div>
             </div>

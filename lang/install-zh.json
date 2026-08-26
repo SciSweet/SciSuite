@@ -24,5 +24,16 @@
     "footer-terms": "条款",
     "footer-privacy": "隐私",
     "footer-cite-text": "请在图注和材料与方法部分引用本插件：<br><em>Figures were prepared with SciSuite plugins (GuideMi, WesternBo, ImageXi, ChartEr, and SciPanel).</em>",
-    "footer-join-text": "我们欢迎各种形式的贡献——功能建议、Bug 报告、翻译或代码。如果你希望参与本项目，请联系我们 (contact@scisuite.cc)。重要贡献者将被列为开发者。"
+    "footer-join-text": "我们欢迎各种形式的贡献——功能建议、Bug 报告、翻译或代码。如果你希望参与本项目，请联系我们 (contact@scisuite.cc)。重要贡献者将被列为开发者。",
+    "m1-label": "方法一：",
+    "m2-label": "方法二：",
+    "m1-s1-label": "步骤 1：",
+    "m1-s2-label": "步骤 2：",
+    "m1-s3-label": "步骤 3：",
+    "m1-s4-label": "步骤 4：",
+    "m1-s5-label": "步骤 5：",
+    "m2-s1-label": "步骤 1：",
+    "m2-s2-label": "步骤 2：",
+    "m2-s3-label": "步骤 3：",
+    "m2-s4-label": "步骤 4："
 }

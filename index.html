@@ -523,6 +523,11 @@
         .stagger .reveal:nth-child(3){transition-delay:.12s} .stagger .reveal:nth-child(4){transition-delay:.18s}
         .stagger .reveal:nth-child(5){transition-delay:.24s} .stagger .reveal:nth-child(6){transition-delay:.3s}
     </style>
+    <script>
+    (function(){ if(localStorage.getItem('scisuite-lang')==='zh'){
+        document.documentElement.classList.add('i18n-loading');
+    } })();
+    </script>
 </head>
 <body>
 
@@ -558,15 +563,15 @@
         </svg>
     </a>
     <ul class="nav-mid">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html" class="active" data-i18n="nav-home">Home</a></li>
         <!-- <li><a href="lvlab/home.html">Lv Lab</a></li> -->
         <li><a href="guidemi/index.html">GuideMi</a></li>
         <li><a href="westernbo/index.html">WesternBo</a></li>
         <li><a href="imagexi/index.html">ImageXi</a></li>
         <li><a href="charter/index.html">ChartEr</a></li>
         <li><a href="scipanel/index.html">SciPanel</a></li>
-        <li><a href="faqs/index.html">FAQs</a></li>
-        <li><a href="credits/index.html">Credits</a></li>
+        <li><a href="faqs/index.html" data-i18n="nav-faqs">FAQs</a></li>
+        <li><a href="credits/index.html" data-i18n="nav-credits">Credits</a></li>
         <li><a style="visibility:hidden;">Try Now</a></li>
     </ul>
     </div>
@@ -575,15 +580,15 @@
 <!-- Hero -->
 <section class="hero">
     <div class="hero-glow"></div>
-    <h2 class="sec-title hero-title">SciSuite, Science Should Be Sweet!</h2>
+    <h2 class="sec-title hero-title"><span data-i18n="hero-title">SciSuite, Science Should Be Sweet!</span></h2>
 
     <div class="hero-carousel">
         <div class="hero-carousel-track" id="carouselTrack">
             <!-- Slide 0: Intro — What is SciSuite? -->
             <div class="hero-slide">
                 <div class="hero-slide-intro">
-                    <h3 class="intro-headline">Life is short, use <span style="color:#f44;">SciSuite</span>.</h3>
-                    <p class="intro-desc">A scientific image processing<br>and figure typesetting plugin suite<br>for Adobe <span style="color:var(--c-ps);">Photoshop</span> and <span style="color:var(--c-ai);">Illustrator</span>.</p>
+                    <h3 class="intro-headline"><span data-i18n="slide-headline">Life is short, use <span style="color:#f44;">SciSuite</span>.</span></h3>
+                    <p class="intro-desc" data-i18n="slide-desc">A scientific image processing<br>and figure typesetting plugin suite<br>for Adobe <span style="color:var(--c-ps);">Photoshop</span> and <span style="color:var(--c-ai);">Illustrator</span>.</p>
                 </div>
             </div>
             <!-- Slide 1: Chinese version — 毛笔字竖排古诗 (hidden)
@@ -614,12 +619,12 @@
 </svg>
                     </div>
                     <div class="hero-right">
-                        <div class="fp"><div class="fp-dot"></div><div class="fp-text"><strong>200+ Specialized Tools</strong> (across 5 plugins for Ps &amp; Ai)</div></div>
-                        <div class="fp"><div class="fp-dot"></div><div class="fp-text"><strong>Vector-Based Output</strong> (crisp shape layers at any resolution)</div></div>
-                        <div class="fp"><div class="fp-dot"></div><div class="fp-text"><strong>Easy-to-Use</strong> (select target, set options, hit Go, done)</div></div>
-                        <div class="fp"><div class="fp-dot"></div><div class="fp-text"><strong>17-Language Localization</strong> (global research team ready)</div></div>
-                        <div class="fp"><div class="fp-dot"></div><div class="fp-text"><strong>Single-Step Undo</strong> (every operation, one Ctrl+Z)</div></div>
-                        <div class="fp"><div class="fp-dot"></div><div class="fp-text"><strong>Preset System</strong> (reuse, share &amp; unify your lab's style)</div></div>
+                        <div class="fp"><div class="fp-dot"></div><div class="fp-text" data-i18n="fp-1"><strong>200+ Specialized Tools</strong> (across 5 plugins for Ps &amp; Ai)</div></div>
+                        <div class="fp"><div class="fp-dot"></div><div class="fp-text" data-i18n="fp-2"><strong>Vector-Based Output</strong> (crisp shape layers at any resolution)</div></div>
+                        <div class="fp"><div class="fp-dot"></div><div class="fp-text" data-i18n="fp-3"><strong>Easy-to-Use</strong> (select target, set options, hit Go, done)</div></div>
+                        <div class="fp"><div class="fp-dot"></div><div class="fp-text" data-i18n="fp-4"><strong>17-Language Localization</strong> (global research team ready)</div></div>
+                        <div class="fp"><div class="fp-dot"></div><div class="fp-text" data-i18n="fp-5"><strong>Single-Step Undo</strong> (every operation, one Ctrl+Z)</div></div>
+                        <div class="fp"><div class="fp-dot"></div><div class="fp-text" data-i18n="fp-6"><strong>Preset System</strong> (reuse, share &amp; unify your lab's style)</div></div>
                     </div>
                 </div>
             </div>
@@ -655,62 +660,62 @@
 <!-- Plugins — 5-column strip -->
 <section class="section" id="plugins">
   <div class="section-inner">
-    <h2 class="sec-title reveal">5 Plugins. One Mission.</h2>
+    <h2 class="sec-title reveal"><span data-i18n="sec-plugins">5 Plugins. One Mission.</span></h2>
 
     <div class="plugins-strip reveal">
         <!-- GuideMi -->
         <div class="p-card">
             <div class="p-card-icon"><img src="img/guidemi-icon.png" alt="GuideMi" style="width:28px;height:28px;"></div>
             <h3>GuideMi</h3>
-            <div class="p-card-tagline">Guide &amp; Layout Management</div>
-            <p>Margins, grids, golden ratio, unequal divisions, and guide layout snapshots with smart boundary detection and live preview.</p>
+            <div class="p-card-tagline"><span data-i18n="pc-guidemi-tagline">Guide &amp; Layout Management</span></div>
+            <p data-i18n="pc-guidemi-desc">Margins, grids, golden ratio, unequal divisions, and guide layout snapshots with smart boundary detection and live preview.</p>
             <div class="p-card-foot">
                 <div class="p-card-platforms"><span class="p-plat ps">Ps</span><span class="p-plat ai">Ai</span></div>
-                <a href="guidemi/index.html" class="p-card-link">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                <a href="guidemi/index.html" class="p-card-link"><span data-i18n="pc-details">Details</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
         </div>
         <!-- WesternBo -->
         <div class="p-card">
             <div class="p-card-icon"><img src="img/westernbo-icon.png" alt="WesternBo" style="width:28px;height:28px;"></div>
             <h3>WesternBo</h3>
-            <div class="p-card-tagline">Western Blot &amp; Gel Tools</div>
-            <p>Lane labeling, molecular weight markers, band resizing, stroke borders, line markers, and plus/minus matrices for blot figures.</p>
+            <div class="p-card-tagline"><span data-i18n="pc-westernbo-tagline">Western Blot &amp; Gel Tools</span></div>
+            <p data-i18n="pc-westernbo-desc">Lane labeling, molecular weight markers, band resizing, stroke borders, line markers, and plus/minus matrices for blot figures.</p>
             <div class="p-card-foot">
                 <div class="p-card-platforms"><span class="p-plat ps">Ps</span><span class="p-plat ai">Ai</span></div>
-                <a href="westernbo/index.html" class="p-card-link">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                <a href="westernbo/index.html" class="p-card-link"><span data-i18n="pc-details">Details</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
         </div>
         <!-- ImageXi -->
         <div class="p-card">
             <div class="p-card-icon"><img src="img/imagexi-icon.png" alt="ImageXi" style="width:28px;height:28px;"></div>
             <h3>ImageXi</h3>
-            <div class="p-card-tagline">Microscopy Image Processing</div>
-            <p>Scale bars, channel split/merge, pseudo-color LUTs, magnified insets, sequential labeling, and batch layer resizing for microscopy figures.</p>
+            <div class="p-card-tagline"><span data-i18n="pc-imagexi-tagline">Microscopy Image Processing</span></div>
+            <p data-i18n="pc-imagexi-desc">Scale bars, channel split/merge, pseudo-color LUTs, magnified insets, sequential labeling, and batch layer resizing for microscopy figures.</p>
             <div class="p-card-foot">
                 <div class="p-card-platforms"><span class="p-plat ps">Ps</span><span class="p-plat ai">Ai</span></div>
-                <a href="imagexi/index.html" class="p-card-link">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                <a href="imagexi/index.html" class="p-card-link"><span data-i18n="pc-details">Details</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
         </div>
         <!-- ChartEr -->
         <div class="p-card">
             <div class="p-card-icon"><img src="img/charter-icon.png" alt="ChartEr" style="width:28px;height:28px;"></div>
             <h3>ChartEr</h3>
-            <div class="p-card-tagline">Chart Annotation &amp; Tables</div>
-            <p>Significance marks, bar resizing, advanced line markers, table drawing, and phrase bank for annotating charts and graphs.</p>
+            <div class="p-card-tagline"><span data-i18n="pc-charter-tagline">Chart Annotation &amp; Tables</span></div>
+            <p data-i18n="pc-charter-desc">Significance marks, bar resizing, advanced line markers, table drawing, and phrase bank for annotating charts and graphs.</p>
             <div class="p-card-foot">
                 <div class="p-card-platforms"><span class="p-plat ps">Ps</span><span class="p-plat ai">Ai</span></div>
-                <a href="charter/index.html" class="p-card-link">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                <a href="charter/index.html" class="p-card-link"><span data-i18n="pc-details">Details</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
         </div>
         <!-- SciPanel -->
         <div class="p-card">
             <div class="p-card-icon"><img src="img/scipanel-icon.png" alt="SciPanel" style="width:28px;height:28px;"></div>
             <h3>SciPanel</h3>
-            <div class="p-card-tagline">Figure Panel Assembly</div>
-            <p>Multi-panel layout with smart resize, alignment, distribution, ABC labeling, figure labels, dimension markers, and batch export to PNG/TIFF/PDF.</p>
+            <div class="p-card-tagline"><span data-i18n="pc-scipanel-tagline">Figure Panel Assembly</span></div>
+            <p data-i18n="pc-scipanel-desc">Multi-panel layout with smart resize, alignment, distribution, ABC labeling, figure labels, dimension markers, and batch export to PNG/TIFF/PDF.</p>
             <div class="p-card-foot">
                 <div class="p-card-platforms"><span class="p-plat ps">Ps</span><span class="p-plat ai">Ai</span></div>
-                <a href="scipanel/index.html" class="p-card-link">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                <a href="scipanel/index.html" class="p-card-link"><span data-i18n="pc-details">Details</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
         </div>
     </div>
@@ -720,7 +725,7 @@
 <!-- Why SciSuite — 5-column strip -->
 <section class="section" id="why">
   <div class="section-inner">
-    <h2 class="sec-title reveal">Key Features</h2>
+    <h2 class="sec-title reveal"><span data-i18n="sec-features">Key Features</span></h2>
 
     <div class="why-grid reveal">
         <!-- 1. 200+ Specialized Tools → Stay in Your Workflow -->
@@ -732,8 +737,8 @@
                     <path d="M7 10l3 3 7-7"/>
                 </svg>
             </div>
-            <h3>200+ Specialized Tools</h3>
-            <p>Grids and guides, blots cropping and annotations, scale bars, inset, channel split/merge and pseudo-color, significance marks and tables, panel layout with advanced alignment, distribution, and batch export.</p>
+            <h3 data-i18n="why-1-title">200+ Specialized Tools</h3>
+            <p data-i18n="why-1-desc">Grids and guides, blots cropping and annotations, scale bars, inset, channel split/merge and pseudo-color, significance marks and tables, panel layout with advanced alignment, distribution, and batch export.</p>
         </div>
         <!-- 2. Vector-Based Output -->
         <div class="why-card">
@@ -744,8 +749,8 @@
                     <path d="M2 12l10 5 10-5"/>
                 </svg>
             </div>
-            <h3>Vector-Based Output</h3>
-            <p>Stroke borders, line markers, scale bars, significance marks, tables, and dimension markers are all generated as vector shape layers. Crisp at any resolution, ready for journal submission without rasterization artifacts.</p>
+            <h3 data-i18n="why-2-title">Vector-Based Output</h3>
+            <p data-i18n="why-2-desc">Stroke borders, line markers, scale bars, significance marks, tables, and dimension markers are all generated as vector shape layers. Crisp at any resolution, ready for journal submission without rasterization artifacts.</p>
         </div>
         <!-- 3. Easy-to-Use -->
         <div class="why-card">
@@ -757,8 +762,8 @@
                     <line x1="15" y1="9" x2="15.01" y2="9"/>
                 </svg>
             </div>
-            <h3>Easy-to-Use</h3>
-            <p>Select your target, set a few options, hit Go. If something isn't right, the plugin tells you exactly what to fix. Click, long-press, right-click, and scroll wheel give you full control without leaving the panel.</p>
+            <h3 data-i18n="why-3-title">Easy-to-Use</h3>
+            <p data-i18n="why-3-desc">Select your target, set a few options, hit Go. If something isn't right, the plugin tells you exactly what to fix. Click, long-press, right-click, and scroll wheel give you full control without leaving the panel.</p>
         </div>
         <!-- 4. 17-Language Localization -->
         <div class="why-card">
@@ -769,8 +774,8 @@
                     <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
                 </svg>
             </div>
-            <h3>17-Language Localization</h3>
-            <p>中文, 日本語, 한국어, العربية, Deutsch, English, Español, Español (Latinoamérica), Français, Indonesia, Italiano, Português (Brasil), Português (Portugal), Русский, Türkçe. Your whole research team covered, worldwide.</p>
+            <h3 data-i18n="why-4-title">17-Language Localization</h3>
+            <p data-i18n="why-4-desc">中文, 日本語, 한국어, العربية, Deutsch, English, Español, Español (Latinoamérica), Français, Indonesia, Italiano, Português (Brasil), Português (Portugal), Русский, Türkçe. Your whole research team covered, worldwide.</p>
         </div>
         <!-- 5. Single-Step Undo -->
         <div class="why-card">
@@ -780,8 +785,8 @@
                     <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
                 </svg>
             </div>
-            <h3>Single-Step Undo</h3>
-            <p>In Photoshop, a single plugin action may modify dozens of layers, normally requiring many undo steps to revert. SciSuite wraps each operation into one history state, so one Ctrl+Z takes you right back.</p>
+            <h3 data-i18n="why-5-title">Single-Step Undo</h3>
+            <p data-i18n="why-5-desc">In Photoshop, a single plugin action may modify dozens of layers, normally requiring many undo steps to revert. SciSuite wraps each operation into one history state, so one Ctrl+Z takes you right back.</p>
         </div>
         <!-- 6. Preset System -->
         <div class="why-card">
@@ -792,8 +797,8 @@
                     <line x1="12" y1="2" x2="12" y2="15"/>
                 </svg>
             </div>
-            <h3>Preset System</h3>
-            <p>Save your settings, export them as files, and share across your lab. Everyone gets the same style, consistent figures, zero setup when switching machines or onboarding new members.</p>
+            <h3 data-i18n="why-6-title">Preset System</h3>
+            <p data-i18n="why-6-desc">Save your settings, export them as files, and share across your lab. Everyone gets the same style, consistent figures, zero setup when switching machines or onboarding new members.</p>
         </div>
     </div>
   </div>
@@ -802,7 +807,7 @@
 <!-- Download & Install -->
 <section class="section" id="download">
   <div class="section-inner">
-    <h2 class="sec-title reveal">Download &amp; Install</h2>
+    <h2 class="sec-title reveal"><span data-i18n="sec-download">Download &amp; Install</span></h2>
 
     <div class="download-grid reveal">
         <div class="dl-card">
@@ -813,7 +818,7 @@
                     <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
             </div>
-            <h3>Photoshop Plugins</h3>
+            <h3><span data-i18n="dl-ps-title">Photoshop Plugins</span></h3>
             <div class="dl-card-names"><span class="dl-names-all">All</span><div class="dl-names-list"><span>GuideMi</span><span>WesternBo</span><span>ImageXi</span><span>ChartEr</span><span>SciPanel</span></div></div>
             <div class="dl-icons-row">
                 <button class="dl-all-btn" data-platform="PS" data-tip="All (Ps)" onclick="downloadAll(this,'PS')">
@@ -836,7 +841,7 @@
                     <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
             </div>
-            <h3>Illustrator Plugins</h3>
+            <h3><span data-i18n="dl-ai-title">Illustrator Plugins</span></h3>
             <div class="dl-card-names"><span class="dl-names-all">All</span><div class="dl-names-list"><span>GuideMi</span><span>WesternBo</span><span>ImageXi</span><span>ChartEr</span><span>SciPanel</span></div></div>
             <div class="dl-icons-row">
                 <button class="dl-all-btn" data-platform="AI" data-tip="All (Ai)" onclick="downloadAll(this,'AI')">
@@ -858,9 +863,9 @@
                     <path d="M9 12l2 2 4-4"/>
                 </svg>
             </div>
-            <h3>Installation Guide</h3>
-            <p>Step-by-step setup instructions for Photoshop &amp; Illustrator on Windows &amp; macOS.</p>
-            <span class="p-card-link" style="margin-top:auto; padding-top:14px; border-top:1px solid var(--c-border-subtle);">View Guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            <h3><span data-i18n="dl-install-title">Installation Guide</span></h3>
+            <p data-i18n="dl-install-desc">Step-by-step setup instructions for Photoshop &amp; Illustrator on Windows &amp; macOS.</p>
+            <span class="p-card-link" style="margin-top:auto; padding-top:14px; border-top:1px solid var(--c-border-subtle);"><span data-i18n="dl-install-link">View Guide</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </a>
     </div>
   </div>
@@ -942,21 +947,21 @@
 <!-- Footer -->
 <footer class="footer">
     <div class="footer-inner">
-        <span class="footer-copy">&copy; 2026 Bo Lv. All rights reserved.</span>
+        <span class="footer-copy"><span data-i18n="footer-rights">&copy; 2026 Bo Lv. All rights reserved.</span></span>
         <span class="footer-copy" id="visitor-count" style="opacity:0; transition: opacity 0.5s ease;"></span>
         <ul class="footer-links">
-            <li><a href="contact/index.html">Contact</a></li>
-            <li><a data-panel="cite">Cite Us</a></li>
-            <li><a data-panel="join">Join Us</a></li>
-            <li><a href="terms/index.html">Terms</a></li>
-            <li><a href="privacy/index.html">Privacy</a></li>
+            <li><a href="contact/index.html" data-i18n="footer-contact">Contact</a></li>
+            <li><a data-panel="cite" data-i18n="footer-cite">Cite Us</a></li>
+            <li><a data-panel="join" data-i18n="footer-join">Join Us</a></li>
+            <li><a href="terms/index.html" data-i18n="footer-terms">Terms</a></li>
+            <li><a href="privacy/index.html" data-i18n="footer-privacy">Privacy</a></li>
         </ul>
     </div>
     <div class="footer-panel" id="panel-cite">
-        <p>Cite the plugins for your legends and Materials &amp; Methods sections:<br><em>Figures were prepared with SciSuite plugins (GuideMi, WesternBo, ImageXi, ChartEr, and SciPanel).</em></p>
+        <p><span data-i18n="footer-cite-text">Cite the plugins for your legends and Materials &amp; Methods sections:<br><em>Figures were prepared with SciSuite plugins (GuideMi, WesternBo, ImageXi, ChartEr, and SciPanel).</em></span></p>
     </div>
     <div class="footer-panel" id="panel-join">
-        <p>We welcome contributions of all kinds — feature ideas, bug reports, translations, or code. Please contact us (contact@scisuite.cc) if you would like to contribute to this project. Significant contributors will be credited as developers.</p>
+        <p><span data-i18n="footer-join-text">We welcome contributions of all kinds — feature ideas, bug reports, translations, or code. Please contact us (contact@scisuite.cc) if you would like to contribute to this project. Significant contributors will be credited as developers.</span></p>
     </div>
 </footer>
 
@@ -1112,5 +1117,6 @@ function downloadAll(btn, platform) {
     })();
 })();
 </script>
+<script src="lang/i18n.js" data-json="lang/index-zh.json"></script>
 </body>
 </html>

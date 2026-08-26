@@ -336,6 +336,11 @@
         }
         .wechat-qr-label strong { color: var(--c-text); }
     </style>
+    <script>
+    (function(){ if(localStorage.getItem('scisuite-lang')==='zh'){
+        document.documentElement.classList.add('i18n-loading');
+    } })();
+    </script>
 </head>
 <body>
 
@@ -369,16 +374,16 @@
         </svg>
     </a>
     <ul class="nav-mid">
-        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html" data-i18n="nav-home">Home</a></li>
         <!-- <li><a href="../lvlab/home.html">Lv Lab</a></li> -->
         <li><a href="../guidemi/index.html">GuideMi</a></li>
         <li><a href="../westernbo/index.html">WesternBo</a></li>
         <li><a href="../imagexi/index.html">ImageXi</a></li>
         <li><a href="../charter/index.html">ChartEr</a></li>
         <li><a href="../scipanel/index.html">SciPanel</a></li>
-        <li><a href="../faqs/index.html">FAQs</a></li>
-        <li><a href="../credits/index.html">Credits</a></li>
-        <li><a href="../index.html#download">Try Now</a></li>
+        <li><a href="../faqs/index.html" data-i18n="nav-faqs">FAQs</a></li>
+        <li><a href="../credits/index.html" data-i18n="nav-credits">Credits</a></li>
+        <li><a href="../index.html#download" data-i18n="nav-trynow">Try Now</a></li>
     </ul>
     </div>
 </nav>
@@ -390,8 +395,8 @@
     <div class="contact-container">
         <!-- Left: Info -->
         <div class="contact-info">
-            <h1>Get in Touch</h1>
-            <p>Have a question, feature request, bug report, or just want to say hello? We'd love to hear from you.</p>
+            <h1 data-i18n="header-title">Get in Touch</h1>
+            <p data-i18n="header-desc">Have a question, feature request, bug report, or just want to say hello? We'd love to hear from you.</p>
 
             <div class="info-items">
                 <div class="info-item">
@@ -417,7 +422,7 @@
                     </div>
                     <div class="info-detail">
                         <span class="info-label">Location</span>
-                        <span class="info-value">The SciSuite Team<br>Hangzhou, zhejiang, CN</span>
+                        <span class="info-value"><span data-i18n="info-location-value">The SciSuite Team<br>Hangzhou, zhejiang, CN</span></span>
                     </div>
                 </div>
 
@@ -430,7 +435,7 @@
                     </div>
                     <div class="info-detail">
                         <span class="info-label">Response Time</span>
-                        <span class="info-value">Usually within 3 business days</span>
+                        <span class="info-value"><span data-i18n="info-response-value">Usually within 3 business days</span></span>
                     </div>
                 </div>
             </div>
@@ -500,7 +505,7 @@
                     <div class="wechat-qr-modal" onclick="event.stopPropagation()">
                         <button class="wechat-qr-close" onclick="toggleWechatQR()">&times;</button>
                         <img src="../img/wechat-qr.jpg" alt="SciSuite WeChat QR" class="wechat-qr-img">
-                        <p class="wechat-qr-label">WeChat Official Account: <strong>SciSuite</strong></p>
+                        <p class="wechat-qr-label"><span data-i18n="wechat-label">WeChat Official Account: </span><strong>SciSuite</strong></p>
                     </div>
                 </div>
             </div>
@@ -508,8 +513,8 @@
 
         <!-- Right: Form -->
         <div class="contact-form-wrap">
-            <h2>Send a Message</h2>
-            <p>All fields marked with * are required.</p>
+            <h2><span data-i18n="form-title">Send a Message</span></h2>
+            <p><span data-i18n="form-required">All fields marked with * are required.</span></p>
 
             <form id="contact-form" action="https://formsubmit.co/ajax/144a9f23a99876e3abfc0d6162e2b831" method="POST">
                 <!-- Formsubmit config (AJAX mode)
@@ -546,11 +551,11 @@
                 <div class="form-group">
                     <label class="form-label">Subject</label>
                     <select name="subject" class="form-select">
-                        <option value="General Inquiry">General Inquiry</option>
-                        <option value="Feature Request">Feature Request</option>
-                        <option value="Bug Report">Bug Report</option>
-                        <option value="Collaboration">Collaboration</option>
-                        <option value="Other">Other</option>
+                        <option value="General Inquiry"><span data-i18n="form-opt-general">General Inquiry</span></option>
+                        <option value="Feature Request"><span data-i18n="form-opt-feature">Feature Request</span></option>
+                        <option value="Bug Report"><span data-i18n="form-opt-bug">Bug Report</span></option>
+                        <option value="Collaboration"><span data-i18n="form-opt-collab">Collaboration</span></option>
+                        <option value="Other"><span data-i18n="form-opt-other">Other</span></option>
                     </select>
                 </div>
 
@@ -576,21 +581,21 @@
 <!-- Footer -->
 <footer class="footer">
     <div class="footer-inner">
-        <span class="footer-copy">&copy; 2026 Bo Lv. All rights reserved.</span>
+        <span class="footer-copy"><span data-i18n="footer-rights">&copy; 2026 Bo Lv. All rights reserved.</span></span>
         <span class="footer-copy" id="visitor-count" style="opacity:0; transition: opacity 0.5s ease;"></span>
         <ul class="footer-links">
-            <li><a href="../contact/index.html">Contact</a></li>
-            <li><a data-panel="cite">Cite Us</a></li>
-            <li><a data-panel="join">Join Us</a></li>
-            <li><a href="../terms/index.html">Terms</a></li>
-            <li><a href="../privacy/index.html">Privacy</a></li>
+            <li><a href="../contact/index.html" data-i18n="footer-contact">Contact</a></li>
+            <li><a data-panel="cite" data-i18n="footer-cite">Cite Us</a></li>
+            <li><a data-panel="join" data-i18n="footer-join">Join Us</a></li>
+            <li><a href="../terms/index.html" data-i18n="footer-terms">Terms</a></li>
+            <li><a href="../privacy/index.html" data-i18n="footer-privacy">Privacy</a></li>
         </ul>
     </div>
     <div class="footer-panel" id="panel-cite">
-        <p>Cite the plugins for your legends and Materials &amp; Methods sections:<br><em>Figures were prepared with SciSuite plugins (GuideMi, WesternBo, ImageXi, ChartEr, and SciPanel).</em></p>
+        <p><span data-i18n="footer-cite-text">Cite the plugins for your legends and Materials &amp; Methods sections:<br><em>Figures were prepared with SciSuite plugins (GuideMi, WesternBo, ImageXi, ChartEr, and SciPanel).</em></span></p>
     </div>
     <div class="footer-panel" id="panel-join">
-        <p>We welcome contributions of all kinds — feature ideas, bug reports, translations, or code. Please contact us (contact@scisuite.cc) if you would like to contribute to this project. Significant contributors will be credited as developers.</p>
+        <p><span data-i18n="footer-join-text">We welcome contributions of all kinds — feature ideas, bug reports, translations, or code. Please contact us (contact@scisuite.cc) if you would like to contribute to this project. Significant contributors will be credited as developers.</span></p>
     </div>
 </footer>
 
@@ -683,5 +688,6 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
         .catch(function(){});
 })();
 </script>
+<script src="../lang/i18n.js" data-json="../lang/contact-zh.json"></script>
 </body>
 </html>

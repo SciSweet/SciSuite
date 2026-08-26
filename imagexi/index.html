@@ -264,6 +264,11 @@
             .feat-item { padding: 16px 18px; }
         }
     </style>
+    <script>
+    (function(){ if(localStorage.getItem('scisuite-lang')==='zh'){
+        document.documentElement.classList.add('i18n-loading');
+    } })();
+    </script>
 </head>
 <body>
 
@@ -274,15 +279,15 @@
         <span>ImageXi</span>
     </a>
     <ul class="nav-mid">
-        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html" data-i18n="nav-home">Home</a></li>
         <!-- <li><a href="../lvlab/home.html">Lv Lab</a></li> -->
         <li><a href="../guidemi/index.html">GuideMi</a></li>
         <li><a href="../westernbo/index.html">WesternBo</a></li>
         <li><a href="../imagexi/index.html" class="active">ImageXi</a></li>
         <li><a href="../charter/index.html">ChartEr</a></li>
         <li><a href="../scipanel/index.html">SciPanel</a></li>
-        <li><a href="../faqs/index.html">FAQs</a></li>
-        <li><a href="../credits/index.html">Credits</a></li>
+        <li><a href="../faqs/index.html" data-i18n="nav-faqs">FAQs</a></li>
+        <li><a href="../credits/index.html" data-i18n="nav-credits">Credits</a></li>
         <li><a href="#" id="tryNowBtn">Try Now</a></li>
     </ul>
     </div>
@@ -291,318 +296,318 @@
 <main style="padding: 0 clamp(20px, 5vw, 48px);"><div class="page-content">
     <div class="plugin-header">
         <h1>ImageXi</h1>
-        <div class="plugin-tagline">Microscopy Image Processing</div>
-        <div class="plugin-platforms"><a href="#" data-plugin="ImageXi" data-platform="PS" class="p-plat ps" style="font-size:12px;padding:5px 10px;" data-tip="Download for Photoshop" download>Ps</a><a href="#" data-plugin="ImageXi" data-platform="AI" class="p-plat ai" style="font-size:12px;padding:5px 10px;" data-tip="Download for Illustrator" download>Ai</a></div>
-        <p class="plugin-overview">ImageXi is a Photoshop/Illustrator CEP plugin designed for scientific image processing, particularly optimized for microscopy images. It provides a rich set of automation tools for layer adjustments, text annotations, scale bar creation, and channel operations.</p>
+        <div class="plugin-tagline"><span data-i18n="plugin-tagline">Microscopy Image Processing</span></div>
+        <div class="plugin-platforms"><a href="#" data-plugin="ImageXi" data-platform="PS" class="p-plat ps" style="font-size:12px;padding:5px 10px;" data-tip="Download for Photoshop" data-i18n-tip="dl-tip-ps" download>Ps</a><a href="#" data-plugin="ImageXi" data-platform="AI" class="p-plat ai" style="font-size:12px;padding:5px 10px;" data-tip="Download for Illustrator" data-i18n-tip="dl-tip-ai" download>Ai</a></div>
+        <p class="plugin-overview" data-i18n="plugin-overview">ImageXi is a Photoshop/Illustrator CEP plugin designed for scientific image processing, particularly optimized for microscopy images. It provides a rich set of automation tools for layer adjustments, text annotations, scale bar creation, and channel operations.</p>
     </div>
 
     <div class="ui-overview-section">
-        <h2 class="features-title">Interface Overview</h2>
+        <h2 class="features-title"><span data-i18n="sec-interface">Interface Overview</span></h2>
         <img src="ui-overview.svg" alt="ImageXi plugin interface overview">
     </div>
 
     <div class="features-section">
-        <h2 class="features-title">Key Features</h2>
+        <h2 class="features-title"><span data-i18n="sec-features">Key Features</span></h2>
         <div class="feat-grid">
                 <div class="feat-card">
-                    <div class="feat-card-title">Match Color</div>
+                    <div class="feat-card-title" data-i18n="feat-1-title">Match Color</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="match-color.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Automatically match brightness and color across multiple microscopy images for consistent figure panels.</div>
+                    <div class="feat-card-desc" data-i18n="feat-1-desc">Automatically match brightness and color across multiple microscopy images for consistent figure panels.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Match Color (Cross-Doc)</div>
+                    <div class="feat-card-title" data-i18n="feat-2-title">Match Color (Cross-Doc)</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="match-color-cross.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Match brightness and color across multiple open documents — unify exposure from different imaging sessions.</div>
+                    <div class="feat-card-desc" data-i18n="feat-2-desc">Match brightness and color across multiple open documents — unify exposure from different imaging sessions.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Scale Bar</div>
+                    <div class="feat-card-title" data-i18n="feat-3-title">Scale Bar</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="scale-bar.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Create scale bars in simple or professional mode with automatic calculation from existing calibration.</div>
+                    <div class="feat-card-desc" data-i18n="feat-3-desc">Create scale bars in simple or professional mode with automatic calculation from existing calibration.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Scale Bar Style</div>
+                    <div class="feat-card-title" data-i18n="feat-4-title">Scale Bar Style</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="scale-bar-style.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Change scale bar appearance across all panels at once — switch styles without recreating bars.</div>
+                    <div class="feat-card-desc" data-i18n="feat-4-desc">Change scale bar appearance across all panels at once — switch styles without recreating bars.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Inset</div>
+                    <div class="feat-card-title" data-i18n="feat-5-title">Inset</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="inset.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Create magnified insets from selected regions with optional strokes and connector lines.</div>
+                    <div class="feat-card-desc" data-i18n="feat-5-desc">Create magnified insets from selected regions with optional strokes and connector lines.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Inset (Illustrator)</div>
+                    <div class="feat-card-title" data-i18n="feat-6-title">Inset (Illustrator)</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="inset-ai.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Same magnified inset workflow in Illustrator — works with linked images on artboards.</div>
+                    <div class="feat-card-desc" data-i18n="feat-6-desc">Same magnified inset workflow in Illustrator — works with linked images on artboards.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Pseudo Color</div>
+                    <div class="feat-card-title" data-i18n="feat-7-title">Pseudo Color</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="pseudo-color.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Apply solid pseudo color to grayscale fluorescence layers using Multiply blend mode.</div>
+                    <div class="feat-card-desc" data-i18n="feat-7-desc">Apply solid pseudo color to grayscale fluorescence layers using Multiply blend mode.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Change Pseudo Color</div>
+                    <div class="feat-card-title" data-i18n="feat-8-title">Change Pseudo Color</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="change-pseudo-color.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Switch pseudo color assignments on existing layers — quickly try different color combinations.</div>
+                    <div class="feat-card-desc" data-i18n="feat-8-desc">Switch pseudo color assignments on existing layers — quickly try different color combinations.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">LUT Pseudo Color</div>
+                    <div class="feat-card-title" data-i18n="feat-9-title">LUT Pseudo Color</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="lut-pseudo-color.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Apply multi-color LUT gradients (Fire, Ice, etc.) via Gradient Map for intensity-based visualization.</div>
+                    <div class="feat-card-desc" data-i18n="feat-9-desc">Apply multi-color LUT gradients (Fire, Ice, etc.) via Gradient Map for intensity-based visualization.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Custom Pseudo Color</div>
+                    <div class="feat-card-title" data-i18n="feat-10-title">Custom Pseudo Color</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="custom-pseudo-color.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Define custom RGB colors for pseudo color — go beyond preset palettes for any channel mapping.</div>
+                    <div class="feat-card-desc" data-i18n="feat-10-desc">Define custom RGB colors for pseudo color — go beyond preset palettes for any channel mapping.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Colorize Selection</div>
+                    <div class="feat-card-title" data-i18n="feat-11-title">Colorize Selection</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="colorize-selection.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Colorize specific structures in SEM/TEM grayscale images by painting color onto selected regions.</div>
+                    <div class="feat-card-desc" data-i18n="feat-11-desc">Colorize specific structures in SEM/TEM grayscale images by painting color onto selected regions.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Desaturate</div>
+                    <div class="feat-card-title" data-i18n="feat-12-title">Desaturate</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="desaturate.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Smart desaturation using Channel Mixer — auto-detects the brightest channel for optimal grayscale conversion of fluorescence images.</div>
+                    <div class="feat-card-desc" data-i18n="feat-12-desc">Smart desaturation using Channel Mixer — auto-detects the brightest channel for optimal grayscale conversion of fluorescence images.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Add Text</div>
+                    <div class="feat-card-title" data-i18n="feat-13-title">Add Text</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="add-text.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Quickly add annotation text at specified positions on images with support for multiple texts and background shapes.</div>
+                    <div class="feat-card-desc" data-i18n="feat-13-desc">Quickly add annotation text at specified positions on images with support for multiple texts and background shapes.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Phrase Bank</div>
+                    <div class="feat-card-title" data-i18n="feat-14-title">Phrase Bank</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="phrase-bank.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Common microscopy phrase library — quickly insert fluorophore names like DAPI, EGFP, mCherry with one click.</div>
+                    <div class="feat-card-desc" data-i18n="feat-14-desc">Common microscopy phrase library — quickly insert fluorophore names like DAPI, EGFP, mCherry with one click.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Merge Layers</div>
+                    <div class="feat-card-title" data-i18n="feat-15-title">Merge Layers</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="merge-layers.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Overlay 2–3 same-size layers using Screen blend mode to compare image differences at a glance.</div>
+                    <div class="feat-card-desc" data-i18n="feat-15-desc">Overlay 2–3 same-size layers using Screen blend mode to compare image differences at a glance.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Batch Merge</div>
+                    <div class="feat-card-title" data-i18n="feat-16-title">Batch Merge</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="batch-merge.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Batch process an entire folder — merge layers for comparison across all documents automatically.</div>
+                    <div class="feat-card-desc" data-i18n="feat-16-desc">Batch process an entire folder — merge layers for comparison across all documents automatically.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Merge Docs (Screen)</div>
+                    <div class="feat-card-title" data-i18n="feat-17-title">Merge Docs (Screen)</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="merge-docs.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Merge all open documents into one using Screen blend mode — overlay fluorescence channels for composite visualization.</div>
+                    <div class="feat-card-desc" data-i18n="feat-17-desc">Merge all open documents into one using Screen blend mode — overlay fluorescence channels for composite visualization.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Batch Merge &amp; Save</div>
+                    <div class="feat-card-title" data-i18n="feat-18-title">Batch Merge &amp; Save</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="batch-merge-save.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Batch process an entire folder — merge documents with Screen blend and save as TIFF automatically.</div>
+                    <div class="feat-card-desc" data-i18n="feat-18-desc">Batch process an entire folder — merge documents with Screen blend and save as TIFF automatically.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Split Channels</div>
+                    <div class="feat-card-title" data-i18n="feat-19-title">Split Channels</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="split-channels.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Split a fluorescence image into individual color channels with pseudo color applied — one click from RGB to publication-ready panels.</div>
+                    <div class="feat-card-desc" data-i18n="feat-19-desc">Split a fluorescence image into individual color channels with pseudo color applied — one click from RGB to publication-ready panels.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Batch Split Channels</div>
+                    <div class="feat-card-title" data-i18n="feat-20-title">Batch Split Channels</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="batch-split.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Batch process an entire folder — split channels and apply pseudo color for all documents automatically.</div>
+                    <div class="feat-card-desc" data-i18n="feat-20-desc">Batch process an entire folder — split channels and apply pseudo color for all documents automatically.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Batch Split (Single File)</div>
+                    <div class="feat-card-title" data-i18n="feat-21-title">Batch Split (Single File)</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="batch-split-single.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Batch split channels for a single multi-layer document — process all layers without opening each one.</div>
+                    <div class="feat-card-desc" data-i18n="feat-21-desc">Batch split channels for a single multi-layer document — process all layers without opening each one.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Add Label</div>
+                    <div class="feat-card-title" data-i18n="feat-22-title">Add Label</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="resize-layers.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Automatic sequential labeling (A, B, C or 1, 2, 3) for multiple layers with replace mode.</div>
+                    <div class="feat-card-desc" data-i18n="feat-22-desc">Automatic sequential labeling (A, B, C or 1, 2, 3) for multiple layers with replace mode.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Grid Arranger</div>
+                    <div class="feat-card-title" data-i18n="feat-23-title">Grid Arranger</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="grid-arranger.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Arrange multiple layers into a grid with configurable rows, columns, spacing, and optional resize.</div>
+                    <div class="feat-card-desc" data-i18n="feat-23-desc">Arrange multiple layers into a grid with configurable rows, columns, spacing, and optional resize.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Realign Grid</div>
+                    <div class="feat-card-title" data-i18n="feat-24-title">Realign Grid</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="realign-grid.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Realign layers back to a neat grid — fix misaligned panels after manual adjustments.</div>
+                    <div class="feat-card-desc" data-i18n="feat-24-desc">Realign layers back to a neat grid — fix misaligned panels after manual adjustments.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Tiling</div>
+                    <div class="feat-card-title" data-i18n="feat-25-title">Tiling</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="tiling.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Duplicate selected layers into a grid pattern — quickly tile a single image into rows and columns.</div>
+                    <div class="feat-card-desc" data-i18n="feat-25-desc">Duplicate selected layers into a grid pattern — quickly tile a single image into rows and columns.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Adv Line Marker</div>
+                    <div class="feat-card-title" data-i18n="feat-26-title">Adv Line Marker</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="rounded-corners.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Advanced multi-row annotation tool with cell merging and automatic line splitting.</div>
+                    <div class="feat-card-desc" data-i18n="feat-26-desc">Advanced multi-row annotation tool with cell merging and automatic line splitting.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Rounded Corners</div>
-                    <div class="feat-card-desc">Apply rounded corner masks to image layers — add a polished look to microscopy panels.</div>
+                    <div class="feat-card-title" data-i18n="feat-27-title">Rounded Corners</div>
+                    <div class="feat-card-desc" data-i18n="feat-27-desc">Apply rounded corner masks to image layers — add a polished look to microscopy panels.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Remove Rounded Corners</div>
+                    <div class="feat-card-title" data-i18n="feat-28-title">Remove Rounded Corners</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="remove-corners.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Strip rounded corner masks from layers to restore the original sharp edges.</div>
+                    <div class="feat-card-desc" data-i18n="feat-28-desc">Strip rounded corner masks from layers to restore the original sharp edges.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Stamp</div>
+                    <div class="feat-card-title" data-i18n="feat-29-title">Stamp</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="stamp.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Stamp annotations, scale bars, and labels from one panel onto all other panels — apply consistent formatting across an entire figure.</div>
+                    <div class="feat-card-desc" data-i18n="feat-29-desc">Stamp annotations, scale bars, and labels from one panel onto all other panels — apply consistent formatting across an entire figure.</div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-card-title">Batch Adjust</div>
+                    <div class="feat-card-title" data-i18n="feat-30-title">Batch Adjust</div>
                     <div class="video-wrap" onclick="toggleVideo(this)">
                         <video muted loop playsinline preload="metadata">
                             <source src="batch-adjust.mp4" type="video/mp4">
                         </video>
                         <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                     </div>
-                    <div class="feat-card-desc">Batch adjust brightness, contrast, and levels across multiple layers or documents at once.</div>
+                    <div class="feat-card-desc" data-i18n="feat-30-desc">Batch adjust brightness, contrast, and levels across multiple layers or documents at once.</div>
                 </div>
         </div>
     </div>
 
     <div class="pricing-section">
-        <h2 class="features-title">Pricing</h2>
+        <h2 class="features-title"><span data-i18n="sec-pricing">Pricing</span></h2>
         <div class="pricing-table-wrap">
           <table class="pricing-table">
             <colgroup>
@@ -613,10 +618,10 @@
             </colgroup>
             <thead>
               <tr>
-                <th>Platform</th>
-                <th>Future Ph.D.</th>
-                <th>Ph.D.</th>
-                <th>Enterprise</th>
+                <th data-i18n="th-platform">Platform</th>
+                <th data-i18n="th-future-phd">Future Ph.D.</th>
+                <th data-i18n="th-phd">Ph.D.</th>
+                <th data-i18n="th-enterprise">Enterprise</th>
               </tr>
             </thead>
             <tbody>
@@ -635,28 +640,28 @@
             </tbody>
           </table>
         </div>
-        <p class="pricing-note">All licenses are one-time purchases with free minor updates. Ps and Ai versions are sold separately. Each license is tied to a single computer.</p>
+        <p class="pricing-note" data-i18n="pricing-note">All licenses are one-time purchases with free minor updates. Ps and Ai versions are sold separately. Each license is tied to a single computer.</p>
     </div>
 </div></main>
 
 <!-- Footer -->
 <footer class="footer">
     <div class="footer-inner">
-        <span class="footer-copy">&copy; 2026 Bo Lv. All rights reserved.</span>
+        <span class="footer-copy"><span data-i18n="footer-rights">&copy; 2026 Bo Lv. All rights reserved.</span></span>
         <span class="footer-copy" id="visitor-count" style="opacity:0; transition: opacity 0.5s ease;"></span>
         <ul class="footer-links">
-            <li><a href="../contact/index.html">Contact</a></li>
-            <li><a data-panel="cite">Cite Us</a></li>
-            <li><a data-panel="join">Join Us</a></li>
-            <li><a href="../terms/index.html">Terms</a></li>
-            <li><a href="../privacy/index.html">Privacy</a></li>
+            <li><a href="../contact/index.html" data-i18n="footer-contact">Contact</a></li>
+            <li><a data-panel="cite" data-i18n="footer-cite">Cite Us</a></li>
+            <li><a data-panel="join" data-i18n="footer-join">Join Us</a></li>
+            <li><a href="../terms/index.html" data-i18n="footer-terms">Terms</a></li>
+            <li><a href="../privacy/index.html" data-i18n="footer-privacy">Privacy</a></li>
         </ul>
     </div>
     <div class="footer-panel" id="panel-cite">
-        <p>Cite the plugins for your legends and Materials &amp; Methods sections:<br><em>Figures were prepared with SciSuite plugins (GuideMi, WesternBo, ImageXi, ChartEr, and SciPanel).</em></p>
+        <p><span data-i18n="footer-cite-text">Cite the plugins for your legends and Materials &amp; Methods sections:<br><em>Figures were prepared with SciSuite plugins (GuideMi, WesternBo, ImageXi, ChartEr, and SciPanel).</em></span></p>
     </div>
     <div class="footer-panel" id="panel-join">
-        <p>We welcome contributions of all kinds — feature ideas, bug reports, translations, or code. Please contact us (contact@scisuite.cc) if you would like to contribute to this project. Significant contributors will be credited as developers.</p>
+        <p><span data-i18n="footer-join-text">We welcome contributions of all kinds — feature ideas, bug reports, translations, or code. Please contact us (contact@scisuite.cc) if you would like to contribute to this project. Significant contributors will be credited as developers.</span></p>
     </div>
 </footer>
 
@@ -765,5 +770,6 @@ document.getElementById('tryNowBtn').addEventListener('click', function(e){
         .catch(function(){});
 })();
 </script>
+<script src="../lang/i18n.js" data-json="../lang/imagexi-zh.json"></script>
 </body>
 </html>
