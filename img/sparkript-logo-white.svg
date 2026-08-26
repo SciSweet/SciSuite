@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 205" width="110" height="205">
+  <defs>
+    <style>
+      .stem { stroke-linecap: round; stroke-width: 6.5px; fill: none; stroke: #ffffff; }
+      .spoke { fill: none; stroke: #ffffff; stroke-width: 2.34px; stroke-linecap: round; }
+      .dot-white { fill: #ffffff; }
+      .dot-red { fill: #f44; }
+    </style>
+  </defs>
+  <line class="stem" x1="55" y1="80" x2="55" y2="195"/>
+  <line class="spoke" x1="55" y1="80" x2="55" y2="35"/>
+  <line class="spoke" x1="55" y1="80" x2="93.97" y2="57.50"/>
+  <line class="spoke" x1="55" y1="80" x2="93.97" y2="102.50"/>
+  <line class="spoke" x1="55" y1="80" x2="16.03" y2="102.50"/>
+  <line class="spoke" x1="55" y1="80" x2="16.03" y2="57.50"/>
+  <line class="spoke" x1="55" y1="80" x2="74.49" y2="46.25"/>
+  <line class="spoke" x1="55" y1="80" x2="93.97" y2="80"/>
+  <line class="spoke" x1="55" y1="80" x2="74.49" y2="113.75"/>
+  <line class="spoke" x1="55" y1="80" x2="35.51" y2="113.75"/>
+  <line class="spoke" x1="55" y1="80" x2="16.03" y2="80"/>
+  <line class="spoke" x1="55" y1="80" x2="35.51" y2="46.25"/>
+  <circle class="dot-red" cx="55" cy="80" r="13"/>
+  <circle class="dot-red" cx="55" cy="35" r="8.5"/>
+  <circle class="dot-red" cx="93.97" cy="57.50" r="8.5"/>
+  <circle class="dot-red" cx="93.97" cy="102.50" r="8.5"/>
+  <circle class="dot-red" cx="16.03" cy="102.50" r="8.5"/>
+  <circle class="dot-red" cx="16.03" cy="57.50" r="8.5"/>
+  <circle class="dot-white" cx="74.49" cy="46.25" r="5.2"/>
+  <circle class="dot-white" cx="93.97" cy="80" r="5.2"/>
+  <circle class="dot-white" cx="74.49" cy="113.75" r="5.2"/>
+  <circle class="dot-white" cx="35.51" cy="113.75" r="5.2"/>
+  <circle class="dot-white" cx="16.03" cy="80" r="5.2"/>
+  <circle class="dot-white" cx="35.51" cy="46.25" r="5.2"/>
+</svg>

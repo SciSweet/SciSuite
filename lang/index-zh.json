@@ -51,5 +51,9 @@
     "dl-ai-title": "Illustrator 插件",
     "dl-install-title": "安装指南",
     "dl-install-desc": "Windows 和 macOS 上 Photoshop 与 Illustrator 的分步安装说明。",
-    "dl-install-link": "查看指南"
+    "dl-install-link": "查看指南",
+    "nav-install": "安装",
+    "nav-sparkript": "星火脚本",
+    "slide-spark-title": "Together, We Script the Future.",
+    "slide-spark-desc": "每个 SciSuite 插件都内置 Custom Scripts 区域，提供可自定义的按钮插槽。绑定任意脚本，用颜色和图标个性化，单击即可运行。与社区一起，分享你的脚本。"
 }

@@ -35,5 +35,7 @@
     "m2-s1-label": "步骤 1：",
     "m2-s2-label": "步骤 2：",
     "m2-s3-label": "步骤 3：",
-    "m2-s4-label": "步骤 4："
+    "m2-s4-label": "步骤 4：",
+    "nav-install": "安装",
+    "nav-sparkript": "星火脚本"
 }

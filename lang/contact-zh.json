@@ -35,5 +35,7 @@
     "form-name-ph": "你的姓名",
     "form-email-ph": "you@example.com",
     "form-message-ph": "请告诉我们你的想法...",
-    "copied": "已复制！"
+    "copied": "已复制！",
+    "nav-install": "安装",
+    "nav-sparkript": "星火脚本"
 }

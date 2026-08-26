@@ -37,5 +37,7 @@
     "footer-cite-text": "请在图注和材料与方法部分引用本插件：<br><em>Figures were prepared with SciSuite plugins (GuideMi, WesternBo, ImageXi, ChartEr, and SciPanel).</em>",
     "footer-join-text": "我们欢迎各种形式的贡献——功能建议、Bug 报告、翻译或代码。如果你希望参与本项目，请联系我们 (contact@scisuite.cc)。重要贡献者将被列为开发者。",
     "dl-tip-ps": "下载 Photoshop 版",
-    "dl-tip-ai": "下载 Illustrator 版"
+    "dl-tip-ai": "下载 Illustrator 版",
+    "nav-install": "安装",
+    "nav-sparkript": "星火脚本"
 }

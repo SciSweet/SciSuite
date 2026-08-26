@@ -30,5 +30,7 @@
     "sec-sponsors": "赞助商",
     "sponsors-desc": "SciSuite 定价亲民，因为我们理解研究人员预算通常有限——而且无限期免费试用意味着许多用户从不需要付费。因此，仅靠收入无法覆盖持续的开发、测试和维护成本。如果你的实验室、机构或公司觉得 SciSuite 有用并希望帮助它持续发展，请考虑赞助本项目。",
     "sponsor-placeholder-role": "赞助商",
-    "sponsor-placeholder-desc": "简要描述。"
+    "sponsor-placeholder-desc": "简要描述。",
+    "nav-install": "安装",
+    "nav-sparkript": "星火脚本"
 }

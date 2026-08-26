@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#09090b">
+    <title>Sparkript — Community Scripts for SciSuite</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sparkript — Community Scripts for SciSuite">
+    <meta property="og:description" content="Browse and share user-contributed scripts for SciSuite's customizable action buttons.">
+    <meta property="og:image" content="https://scisuite.cc/img/og-image.png">
+    <meta property="og:url" content="https://scisuite.cc/sparkript/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sparkript — Community Scripts for SciSuite">
+    <meta name="twitter:description" content="Browse and share user-contributed scripts for SciSuite's customizable action buttons.">
+    <meta name="twitter:image" content="https://scisuite.cc/img/og-image.png">
+    <style>
+        :root {
+            --c-bg: #09090b;
+            --c-bg-elevated: #111113;
+            --c-bg-card: #141417;
+            --c-bg-card-hover: #1a1a1e;
+            --c-border: #222228;
+            --c-border-subtle: #18181c;
+            --c-text: #ededf0;
+            --c-text-secondary: #8b8b97;
+            --c-text-muted: #55555f;
+            --c-accent: #3b82f6;
+            --c-accent-glow: rgba(59, 130, 246, 0.10);
+            --c-accent-light: #60a5fa;
+            --c-accent-2: #10b981;
+            --c-ps: #31a8ff;
+            --c-ai: #ff9a00;
+            --font-display: Arial, Helvetica, sans-serif;
+            --font-body: Arial, Helvetica, sans-serif;
+            --r-sm: 6px; --r-md: 12px; --r-lg: 20px; --r-xl: 28px;
+            --ease: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scrollbar-gutter: stable; }
+        body {
+            font-family: var(--font-body);
+            background: var(--c-bg);
+            color: var(--c-text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { text-decoration: none; color: inherit; }
+
+        /* Nav */
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(9, 9, 11, 0.85);
+            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--c-border-subtle);
+            padding: 0 clamp(20px, 5vw, 48px);
+            height: 52px;
+        }
+        .nav-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 100%;
+        }
+        .nav-brand { display: flex; align-items: center; gap: 10px; }
+        .nav-brand img { height: 26px; width: 26px; }
+        .nav-brand span { font-size: 16px; font-weight: 600; color: var(--c-text); }
+        .nav-mid { display: flex; gap: 28px; list-style: none; }
+        .nav-mid a { font-size: 13.5px; color: var(--c-text-secondary); transition: color var(--ease); }
+        .nav-mid a:hover { color: var(--c-text); }
+        .nav-mid a.active { color: var(--c-text); font-weight: 600; }
+        @media (max-width: 768px) { .nav-mid { display: none; } }
+        @media (max-width: 700px) { .how-steps { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .how-steps { grid-template-columns: 1fr; } }
+
+        /* Page header */
+        .page-content {
+            max-width: 1200px; margin: 0 auto;
+            padding: 100px 0 60px;
+        }
+        .page-header { margin-bottom: 48px; }
+        .page-header h1 {
+            font-family: var(--font-display);
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 400; line-height: 1.1; letter-spacing: -0.02em;
+            margin-bottom: 14px;
+        }
+        .page-header-desc {
+            font-size: 15px; color: var(--c-text-secondary); line-height: 1.7;
+            max-width: 640px;
+        }
+
+        /* How it works */
+        .how-section { margin-bottom: 56px; }
+        .how-section h2 {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 3.5vw, 40px); font-weight: 500; margin-bottom: 20px;
+            color: var(--c-text);
+        }
+        .how-steps {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--c-border); border-radius: var(--r-lg); overflow: hidden;
+        }
+        .how-step {
+            background: var(--c-bg-card); padding: 32px 24px;
+            transition: background var(--ease);
+        }
+        .how-step:hover { background: var(--c-bg-card-hover); }
+        .how-step-num {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 28px; height: 28px; border-radius: 50%;
+            background: var(--c-accent); color: #fff;
+            font-size: 13px; font-weight: 700; margin-bottom: 12px;
+        }
+        .how-step h3 {
+            font-family: var(--font-display);
+            font-size: 15px; font-weight: 600; margin-bottom: 6px;
+        }
+        .how-step p {
+            font-size: 13px; color: var(--c-text-secondary); line-height: 1.6;
+        }
+
+        /* Scripts section */
+        .scripts-section { margin-bottom: 56px; }
+        .scripts-section h2 {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 3.5vw, 40px); font-weight: 500; margin-bottom: 8px;
+            color: var(--c-text);
+        }
+        .scripts-section > p {
+            font-size: 14px; color: var(--c-text-secondary); margin-bottom: 24px;
+        }
+
+        /* Script cards */
+        .script-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;
+        }
+        .script-card {
+            background: var(--c-bg-card); border: 1px solid var(--c-border);
+            border-radius: var(--r-md); padding: 24px;
+            transition: border-color var(--ease), background var(--ease);
+        }
+        .script-card:hover { background: var(--c-bg-card-hover); border-color: var(--c-accent); }
+        .script-card-head {
+            display: flex; align-items: center; gap: 10px; margin-bottom: 12px;
+        }
+        .script-card-icon {
+            width: 36px; height: 36px; border-radius: var(--r-sm);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px;
+        }
+        .script-card-title {
+            font-family: var(--font-display); font-size: 16px; font-weight: 600;
+        }
+        .script-card-desc {
+            font-size: 13px; color: var(--c-text-secondary); line-height: 1.6;
+            margin-bottom: 14px;
+        }
+        .script-card-meta {
+            display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+        }
+        .script-tag {
+            font-size: 11px; font-weight: 500; padding: 3px 8px;
+            border-radius: 20px; border: 1px solid var(--c-border);
+            color: var(--c-text-muted);
+        }
+        .script-tag.ps { color: var(--c-ps); border-color: rgba(49,168,255,0.25); }
+        .script-tag.ai { color: var(--c-ai); border-color: rgba(255,154,0,0.25); }
+
+        /* Coming soon placeholder */
+        .coming-soon {
+            text-align: center; padding: 56px 20px;
+            background: var(--c-bg-card); border: 1px dashed var(--c-border);
+            border-radius: var(--r-lg);
+        }
+        .coming-soon-icon { margin-bottom: 16px; }
+        .coming-soon-icon img { width: 48px; height: auto; }
+        .coming-soon h3 {
+            font-family: var(--font-display); font-size: 20px; margin-bottom: 8px;
+        }
+        .coming-soon p {
+            font-size: 14px; color: var(--c-text-secondary); max-width: 440px; margin: 0 auto 20px;
+        }
+        .btn-submit-script {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 10px 24px; border-radius: var(--r-md);
+            font-size: 13.5px; font-weight: 500; font-family: var(--font-body);
+            border: 1px solid var(--c-accent); cursor: pointer;
+            background: transparent; color: var(--c-accent-light);
+            transition: all var(--ease);
+        }
+        .btn-submit-script:hover {
+            background: var(--c-accent); color: #fff;
+        }
+        .btn-submit-script svg { width: 16px; height: 16px; }
+
+        /* Footer */
+        .footer { padding: 32px clamp(20px, 5vw, 48px); border-top: 1px solid var(--c-border); }
+        .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+        .footer-copy { font-size: 12.5px; color: var(--c-text-muted); }
+        .footer-links { display: flex; gap: 20px; list-style: none; }
+        .footer-links a { font-size: 12.5px; color: var(--c-text-muted); transition: color var(--ease); cursor: pointer; }
+        .footer-links a:hover { color: var(--c-text-secondary); }
+        .footer-links a.active { color: var(--c-accent-light); }
+        @media (max-width: 480px) { .footer { padding: 24px 16px; } .footer-inner { flex-direction: column; text-align: center; } .footer-links { gap: 16px; } .footer-links a { font-size: 12px; } .footer-panel.open { padding: 16px 0 0; } .footer-panel p { font-size: 12px; } }
+        .footer-panel {
+            max-width: 1200px; margin: 0 auto;
+            max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 0;
+        }
+        .footer-panel.open { max-height: 200px; padding: 20px 0 0; }
+        .footer-panel p {
+            font-size: 13px; color: var(--c-text-secondary); line-height: 1.7;
+        }
+
+        /* Animation */
+        @keyframes fu { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+        .page-content { animation: fu 0.7s ease backwards; }
+    </style>
+    <script>
+    (function(){ if(localStorage.getItem('scisuite-lang')==='zh'){
+        document.documentElement.classList.add('i18n-loading');
+    } })();
+    </script>
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav">
+    <div class="nav-inner">
+    <a href="#" class="nav-brand">
+        <img src="../img/sparkript-logo-white.svg" alt="Sparkript">
+        <span>Sparkript</span>
+    </a>
+    <ul class="nav-mid">
+        <li><a href="../index.html" data-i18n="nav-home">Home</a></li>
+        <li><a href="../guidemi/index.html">GuideMi</a></li>
+        <li><a href="../westernbo/index.html">WesternBo</a></li>
+        <li><a href="../imagexi/index.html">ImageXi</a></li>
+        <li><a href="../charter/index.html">ChartEr</a></li>
+        <li><a href="../scipanel/index.html">SciPanel</a></li>
+        <li><a href="../sparkript/index.html" class="active">Sparkript</a></li>
+        <li><a href="../install/index.html" data-i18n="nav-install">Install</a></li>
+        <li><a href="../faqs/index.html" data-i18n="nav-faqs">FAQs</a></li>
+        <li><a href="../credits/index.html" data-i18n="nav-credits">Credits</a></li>
+        <li><a href="../index.html#download" data-i18n="nav-trynow">Try Now</a></li>
+    </ul>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<main style="padding: 0 clamp(20px, 5vw, 48px);"><div class="page-content">
+    <div class="page-header">
+        <h1 data-i18n="header-title">Sparkript</h1>
+        <p class="page-header-desc" data-i18n="header-desc">Every SciSuite plugin includes a <strong>Custom Scripts</strong> section with assignable button slots. You can add more slots, assign any Photoshop/Illustrator script to a button, rename it, set a custom color and icon, and run it with a single click. This page collects scripts shared by the community — download one and assign it to your panel.</p>
+    </div>
+
+    <!-- How it works -->
+    <div class="how-section">
+        <h2 data-i18n="how-title">How It Works</h2>
+        <div class="how-steps">
+            <div class="how-step">
+                <div class="how-step-num">1</div>
+                <h3 data-i18n="how-1-title">Add a Slot</h3>
+                <p data-i18n="how-1-desc">In the Custom Scripts section of any SciSuite plugin panel, click the "+" button to create a new button slot.</p>
+            </div>
+            <div class="how-step">
+                <div class="how-step-num">2</div>
+                <h3 data-i18n="how-2-title">Assign a Script</h3>
+                <p data-i18n="how-2-desc">Click the slot or right-click and choose "Assign Script..." to load a .jsx/.jsxbin script. To tell buttons apart, either rename them with a custom label and color, or assign a 36×36 PNG/SVG icon instead.</p>
+            </div>
+            <div class="how-step">
+                <div class="how-step-num">3</div>
+                <h3 data-i18n="how-3-title">One-Click Run</h3>
+                <p data-i18n="how-3-desc">Click the button to run the script instantly. Right-click for options: reveal in Explorer, clear assignment, or remove the slot.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <div class="scripts-section">
+        <h2 data-i18n="scripts-title">Community Scripts</h2>
+        <p data-i18n="scripts-desc">Scripts shared by users will appear here. Be the first to contribute!</p>
+
+        <div class="coming-soon">
+            <div class="coming-soon-icon"><img src="../img/sparkript-logo-white.svg" alt="Sparkript"></div>
+            <h3 data-i18n="coming-title">Coming Soon</h3>
+            <p data-i18n="coming-desc">Community scripts will be collected here as users start sharing. Have a useful Photoshop or Illustrator script? Submit it and help fellow researchers!</p>
+            <a href="../contact/index.html" class="btn-submit-script">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"/>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+                <span data-i18n="coming-btn">Submit a Script</span>
+            </a>
+        </div>
+    </div>
+</div></main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <span class="footer-copy"><span data-i18n="footer-rights">&copy; 2026 Bo Lv. All rights reserved.</span></span>
+        <span class="footer-copy" id="visitor-count" style="opacity:0; transition: opacity 0.5s ease;"></span>
+        <ul class="footer-links">
+        <li><a href="../contact/index.html" data-i18n="footer-contact">Contact</a></li>
+            <li><a data-panel="cite" data-i18n="footer-cite">Cite Us</a></li>
+            <li><a data-panel="join" data-i18n="footer-join">Join Us</a></li>
+        <li><a href="../terms/index.html" data-i18n="footer-terms">Terms</a></li>
+        <li><a href="../privacy/index.html" data-i18n="footer-privacy">Privacy</a></li>
+        </ul>
+    </div>
+    <div class="footer-panel" id="panel-cite">
+        <p><span data-i18n="footer-cite-text">Cite the plugins for your legends and Materials &amp; Methods sections:<br><em>Figures were prepared with SciSuite plugins (GuideMi, WesternBo, ImageXi, ChartEr, and SciPanel).</em></span></p>
+    </div>
+    <div class="footer-panel" id="panel-join">
+        <p><span data-i18n="footer-join-text">We welcome contributions of all kinds: feature ideas, bug reports, translations, or code. Please contact us (contact@scisuite.cc) if you would like to contribute to this project. Significant contributors will be credited as developers.</span></p>
+    </div>
+</footer>
+
+<script>
+document.querySelectorAll('a[data-panel]').forEach(function(a){
+    a.addEventListener('click', function(){
+        var id = 'panel-' + this.getAttribute('data-panel');
+        var panel = document.getElementById(id);
+        var isOpen = panel.classList.contains('open');
+        var clickedFromFooter = this.closest('.footer-links');
+        document.querySelectorAll('.footer-panel').forEach(function(p){ p.classList.remove('open'); });
+        document.querySelectorAll('.footer-links a').forEach(function(l){ l.classList.remove('active'); });
+        if (!isOpen || !clickedFromFooter) {
+            panel.classList.add('open');
+            if (clickedFromFooter) this.classList.add('active');
+            setTimeout(function(){
+                    var scrollBottom = window.innerHeight + window.scrollY;
+                    if (document.body.scrollHeight - scrollBottom > 50) {
+                        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                    }
+                }, 420);
+        }
+    });
+});
+</script>
+<script>
+(function(){
+    fetch('https://countapi.mileshilliard.com/api/v1/hit/scisuite_github_io_visits')
+        .then(function(r){ return r.json(); })
+        .then(function(data){
+            var el = document.getElementById('visitor-count');
+            if(el && data.value){
+                el.textContent = 'Total Visits: ' + Number(data.value).toLocaleString();
+                el.style.opacity = '1';
+            }
+        })
+        .catch(function(){});
+})();
+</script>
+<script src="../lang/i18n.js" data-json="../lang/sparkript-zh.json"></script>
+</body>
+</html>
