@@ -16,7 +16,7 @@
     "header-desc": "有问题、功能建议、Bug 报告，或只是想打个招呼？我们很乐意听到你的声音。",
     "info-email-label": "邮箱",
     "info-location-label": "地点",
-    "info-location-value": "SciSuite 团队<br>中国浙江杭州",
+    "info-location-value": "SciSuite 团队<br>中国浙江省杭州市",
     "info-response-label": "回复时间",
     "info-response-value": "通常 3 个工作日内",
     "wechat-label": "微信公众号：",
@@ -31,5 +31,9 @@
     "form-opt-collab": "合作",
     "form-opt-other": "其他",
     "form-message": "消息",
-    "form-submit": "发送消息"
+    "form-submit": "发送消息",
+    "form-name-ph": "你的姓名",
+    "form-email-ph": "you@example.com",
+    "form-message-ph": "请告诉我们你的想法...",
+    "copied": "已复制！"
 }

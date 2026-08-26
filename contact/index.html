@@ -405,10 +405,10 @@
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                             <polyline points="22,6 12,13 2,6"/>
                         </svg>
-                        <span class="copy-tooltip">Copied!</span>
+                        <span class="copy-tooltip" data-i18n="copied">Copied!</span>
                     </div>
                     <div class="info-detail">
-                        <span class="info-label">Email</span>
+                        <span class="info-label" data-i18n="info-email-label">Email</span>
                         <span class="info-value"><a href="mailto:contact@scisuite.cc">contact@scisuite.cc</a></span>
                     </div>
                 </div>
@@ -421,7 +421,7 @@
                         </svg>
                     </div>
                     <div class="info-detail">
-                        <span class="info-label">Location</span>
+                        <span class="info-label" data-i18n="info-location-label">Location</span>
                         <span class="info-value"><span data-i18n="info-location-value">The SciSuite Team<br>Hangzhou, zhejiang, CN</span></span>
                     </div>
                 </div>
@@ -434,7 +434,7 @@
                         </svg>
                     </div>
                     <div class="info-detail">
-                        <span class="info-label">Response Time</span>
+                        <span class="info-label" data-i18n="info-response-label">Response Time</span>
                         <span class="info-value"><span data-i18n="info-response-value">Usually within 3 business days</span></span>
                     </div>
                 </div>
@@ -539,33 +539,33 @@
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label class="form-label">Name <span class="req">*</span></label>
-                        <input type="text" name="name" class="form-input" placeholder="Your name" required>
+                        <label class="form-label"><span data-i18n="form-name">Name</span> <span class="req">*</span></label>
+                        <input type="text" name="name" class="form-input" placeholder="Your name" data-i18n-placeholder="form-name-ph" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Email <span class="req">*</span></label>
-                        <input type="email" name="email" class="form-input" placeholder="you@example.com" required>
+                        <label class="form-label"><span data-i18n="form-email">Email</span> <span class="req">*</span></label>
+                        <input type="email" name="email" class="form-input" placeholder="you@example.com" data-i18n-placeholder="form-email-ph" required>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label">Subject</label>
+                    <label class="form-label" data-i18n="form-subject">Subject</label>
                     <select name="subject" class="form-select">
-                        <option value="General Inquiry"><span data-i18n="form-opt-general">General Inquiry</span></option>
-                        <option value="Feature Request"><span data-i18n="form-opt-feature">Feature Request</span></option>
-                        <option value="Bug Report"><span data-i18n="form-opt-bug">Bug Report</span></option>
-                        <option value="Collaboration"><span data-i18n="form-opt-collab">Collaboration</span></option>
-                        <option value="Other"><span data-i18n="form-opt-other">Other</span></option>
+                        <option value="General Inquiry" data-i18n="form-opt-general">General Inquiry</option>
+                        <option value="Feature Request" data-i18n="form-opt-feature">Feature Request</option>
+                        <option value="Bug Report" data-i18n="form-opt-bug">Bug Report</option>
+                        <option value="Collaboration" data-i18n="form-opt-collab">Collaboration</option>
+                        <option value="Other" data-i18n="form-opt-other">Other</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label">Message <span class="req">*</span></label>
-                    <textarea name="message" class="form-textarea" placeholder="Tell us what's on your mind..." required></textarea>
+                    <label class="form-label"><span data-i18n="form-message">Message</span> <span class="req">*</span></label>
+                    <textarea name="message" class="form-textarea" placeholder="Tell us what's on your mind..." data-i18n-placeholder="form-message-ph" required></textarea>
                 </div>
 
                 <button type="submit" class="btn-submit" id="submit-btn">
-                    Send Message
+                    <span data-i18n="form-submit">Send Message</span>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="22" y1="2" x2="11" y2="13"/>
                         <polygon points="22 2 15 22 11 13 2 9 22 2"/>

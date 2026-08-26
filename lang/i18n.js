@@ -65,6 +65,10 @@
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
         enCache[el.getAttribute('data-i18n')] = el.innerHTML;
     });
+    var enPlaceholders = {};
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+        enPlaceholders[el.getAttribute('data-i18n-placeholder')] = el.getAttribute('placeholder') || '';
+    });
 
     function applyLang(lang) {
         currentLang = lang;
@@ -84,9 +88,19 @@
         document.querySelectorAll('[data-i18n]').forEach(function (el) {
             var key = el.getAttribute('data-i18n');
             if (lang === 'zh' && zhData && zhData[key]) {
-                el.innerHTML = zhData[key];
+                if (el.tagName === 'OPTION') { el.textContent = zhData[key]; }
+                else { el.innerHTML = zhData[key]; }
             } else if (lang === 'en' && enCache[key]) {
-                el.innerHTML = enCache[key];
+                if (el.tagName === 'OPTION') { el.textContent = enCache[key]; }
+                else { el.innerHTML = enCache[key]; }
+            }
+        });
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+            var key = el.getAttribute('data-i18n-placeholder');
+            if (lang === 'zh' && zhData && zhData[key]) {
+                el.setAttribute('placeholder', zhData[key]);
+            } else if (lang === 'en' && enPlaceholders[key]) {
+                el.setAttribute('placeholder', enPlaceholders[key]);
             }
         });
 
