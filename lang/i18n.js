@@ -107,10 +107,18 @@
         document.documentElement.classList.remove('i18n-loading');
     }
 
+    // =====================================================
+    // TRANSLATION CACHE VERSION
+    // Bump this number every time you update any *-zh.json
+    // file, so returning visitors get the latest translation
+    // instead of a stale browser-cached copy.
+    // =====================================================
+    var i18nVersion = '1';
     function loadZhAndApply() {
         if (zhData) { applyLang('zh'); return; }
         if (!jsonPath) { document.documentElement.classList.remove('i18n-loading'); return; }
-        fetch(jsonPath)
+        var url = jsonPath + (jsonPath.indexOf('?') === -1 ? '?' : '&') + 'v=' + i18nVersion;
+        fetch(url)
             .then(function (r) { return r.json(); })
             .then(function (data) { zhData = data; applyLang('zh'); })
             .catch(function () {
