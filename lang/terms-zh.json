@@ -1,0 +1,16 @@
+{
+    "nav-home": "首页",
+    "nav-faqs": "常见问题",
+    "nav-credits": "致谢",
+    "nav-trynow": "立即体验",
+    "nav-install": "安装",
+    "nav-sparkript": "星火脚本",
+    "footer-rights": "&copy; 2026 Bo Lv. 保留所有权利。",
+    "footer-contact": "联系我们",
+    "footer-cite": "引用",
+    "footer-join": "加入我们",
+    "footer-terms": "条款",
+    "footer-privacy": "隐私",
+    "footer-cite-text": "请在图注和材料与方法部分引用本插件：<br><em>Figures were prepared with SciSuite plugins (GuideMi, WesternBo, ImageXi, ChartEr, and SciPanel).</em>",
+    "footer-join-text": "我们欢迎各种形式的贡献——功能建议、Bug 报告、翻译或代码。如果你希望参与本项目，请联系我们 (contact@scisuite.cc)。重要贡献者将被列为开发者。"
+}
