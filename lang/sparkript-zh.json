@@ -26,6 +26,6 @@
     "scripts-title": "社区脚本",
     "scripts-desc": "用户分享的脚本将显示在这里。成为第一个贡献者吧！",
     "coming-title": "即将上线",
-    "coming-desc": "随着用户开始分享，社区脚本将汇集于此。如果你有好用的 Photoshop 或 Illustrator 脚本，欢迎提交，帮助更多科研同行！",
+    "coming-desc": "随着用户开始分享，社区脚本将汇集于此。如果你有自己编写的原创 Photoshop 或 Illustrator 脚本，欢迎提交，帮助更多科研同行！每位贡献者都将被列入我们的<a href='../credits/index.html' style='color:var(--c-accent-light);'>致谢</a>页面，我们还将定期评选最受欢迎的原创脚本，并为作者提供 $100 现金奖励或 SciSuite 折扣码。",
     "coming-btn": "提交脚本"
 }
