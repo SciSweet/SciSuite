@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.2.3",
+    "latestVersion": "2.0.0",
     "downloadUrl": "https://scisuite.cc/scipanel",
-    "releaseNotes": "Detect updates automatically. Fix bugs in preset system and translation."
+    "releaseNotes": "Added Custom Scripts."
 }

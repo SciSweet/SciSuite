@@ -15,4 +15,5 @@ v1.3.2 08/16/2026 Detect updates automatically. Fix bugs in preset system and tr
 v1.3.3 08/17/2026 Change the threshold of lane number. 
 v1.3.4 08/18/2026 Grid Arranger default changed to 5×1 with adaptive per-row/column spacing.
 v1.3.5 08/20/2026 Fix some minor bugs.
-v1.3.6 08/21/2026 Use standard math minus sign (U+2212) instead of keyboard hyphen-minus for Toggle Sign and MinusPlus Matrix output, ensuring consistent width with the plus sign for better visual alignment.     
+v1.3.6 08/21/2026 Use standard math minus sign (U+2212) instead of keyboard hyphen-minus for Toggle Sign and MinusPlus Matrix output, ensuring consistent width with the plus sign for better visual alignment. 
+v2.0.0 08/28/2026 Adeed Custom Scripts.    
