@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.7.1",
+    "latestVersion": "2.0.0",
     "downloadUrl": "https://scisuite.cc/imagexi",
-    "releaseNotes": "Added Rasterize toggle to Pseudo Color and Colorize Selection right-click menus (default on). Fixed Screen blend mode not working in Merge Objects and Batch Merge Objects when Flatten is off."
+    "releaseNotes": "Adeed Custom Scripts and fixed a bug that paid users incorrectly seeing nag screen due to race condition on window focus."
 }

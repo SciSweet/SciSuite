@@ -1,5 +1,5 @@
 {
-    "latestVersion": "1.2.5",
+    "latestVersion": "2.0.0",
     "downloadUrl": "https://scisuite.cc/scipanel",
-    "releaseNotes": "Fixed an issue where the plugin panel could become unresponsive after minimizing and restoring the Illustrator window."
+    "releaseNotes": "Adeed Custom Scripts and fixed a bug that paid users incorrectly seeing nag screen due to race condition on window focus."
 }
