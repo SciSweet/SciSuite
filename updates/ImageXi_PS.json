@@ -1,5 +1,5 @@
 {
-    "latestVersion": "2.0.0",
+    "latestVersion": "2.0.1",
     "downloadUrl": "https://scisuite.cc/imagexi",
-    "releaseNotes": "Added Custom Scripts."
+    "releaseNotes": "Fixed a bug where the nag screen could appear for activated users during use."
 }
