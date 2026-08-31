@@ -991,7 +991,7 @@ function downloadAll(btn, platform) {
     btn.setAttribute('data-tip', 'Packing…');
     // 1. Fetch all version JSONs for this platform
     Promise.all(pluginNames.map(function(name){
-        return fetch('updates/' + name + '_' + platform + '.json').then(function(r){ return r.json(); }).then(function(data){
+        return fetch('updates/' + name + '_' + platform + '.json?t=' + Date.now()).then(function(r){ return r.json(); }).then(function(data){
             return { name: name, version: data.latestVersion, key: name + '_' + platform };
         });
     })).then(function(plugins){
@@ -1037,7 +1037,7 @@ function downloadAll(btn, platform) {
         var platform = a.getAttribute('data-platform');
         var key = plugin + '_' + platform;
         if (cache[key]) { a.href = buildUrl('download/', key, cache[key]); return; }
-        fetch('updates/' + key + '.json').then(function(r){ return r.json(); }).then(function(data){
+        fetch('updates/' + key + '.json?t=' + Date.now()).then(function(r){ return r.json(); }).then(function(data){
             cache[key] = data.latestVersion;
             document.querySelectorAll('a[data-plugin="'+plugin+'"][data-platform="'+platform+'"]').forEach(function(el){
                 el.href = buildUrl('download/', key, data.latestVersion);

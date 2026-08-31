@@ -405,7 +405,7 @@ document.querySelectorAll('.footer-links a[data-panel]').forEach(function(a){
 var versionCache = {};
 function resolveDownloadUrl(pluginPlatform, callback) {
     if (versionCache[pluginPlatform]) { callback(versionCache[pluginPlatform]); return; }
-    fetch('../updates/' + pluginPlatform + '.json')
+    fetch('../updates/' + pluginPlatform + '.json?t=' + Date.now())
         .then(function(r){ return r.json(); })
         .then(function(data){
             var url = '../download/' + pluginPlatform + '_v' + data.latestVersion + '.zxp';
@@ -434,7 +434,7 @@ document.getElementById('tryNowBtn').addEventListener('click', function(e){
     var pluginName = 'SciPanel';
     Promise.all(['PS','AI'].map(function(platform){
         var key = pluginName + '_' + platform;
-        return fetch('../updates/' + key + '.json').then(function(r){ return r.json(); }).then(function(data){
+        return fetch('../updates/' + key + '.json?t=' + Date.now()).then(function(r){ return r.json(); }).then(function(data){
             var filename = key + '_v' + data.latestVersion + '.zxp';
             return fetch('../download/' + filename).then(function(r){ return r.arrayBuffer(); }).then(function(buf){
                 return { filename: filename, data: buf };
