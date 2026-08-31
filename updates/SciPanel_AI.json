@@ -1,5 +1,5 @@
 {
-    "latestVersion": "2.0.0",
+    "latestVersion": "2.0.1",
     "downloadUrl": "https://scisuite.cc/scipanel",
-    "releaseNotes": "Adeed Custom Scripts and fixed a bug that paid users incorrectly seeing nag screen due to race condition on window focus."
+    "releaseNotes": "Add missing translation for key."
 }

@@ -1,5 +1,5 @@
 {
-    "latestVersion": "2.0.0",
+    "latestVersion": "2.0.1",
     "downloadUrl": "https://scisuite.cc/scipanel",
-    "releaseNotes": "Added Custom Scripts."
+    "releaseNotes": "Add missing translation for key."
 }

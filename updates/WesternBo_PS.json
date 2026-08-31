@@ -1,5 +1,5 @@
 {
-    "latestVersion": "2.0.0",
+    "latestVersion": "2.1.2",
     "downloadUrl": "https://scisuite.cc/westernbo",
-    "releaseNotes": "Added Custom Scripts."
+    "releaseNotes": "Added Clone Number section. Added Normalize Minus Only option for the Toggle Sign function. Add missing translation for key."
 }

@@ -1,5 +1,5 @@
 {
-    "latestVersion": "2.0.0",
+    "latestVersion": "2.1.2",
     "downloadUrl": "https://scisuite.cc/westernbo",
-    "releaseNotes": "Adeed Custom Scripts and fixed a bug that paid users incorrectly seeing nag screen due to race condition on window focus."
+    "releaseNotes": "Added Clone Number section. Added Normalize Minus Only option for the Toggle Sign function. Add missing translation for key."
 }
