@@ -16,3 +16,4 @@ v1.3.6 08/20/2026 Fixed an issue where the plugin panel could become unresponsiv
 v1.3.7 08/21/2026 Use standard math minus sign (U+2212) instead of keyboard hyphen-minus for Toggle Sign and MinusPlus Matrix output, ensuring consistent width with the plus sign for better visual alignment.
 v2.0.0 08/28/2026 Adeed Custom Scripts and fixed a bug that paid users incorrectly seeing nag screen due to race condition on window focus.
 v2.1.2 08/31/2026 Added Clone Number section. Added Normalize Minus Only option for the Toggle Sign function. Add missing translation for key.
+v2.2.4 09/02/2026 Added NS (Non-Specific) Band Marker; Added more unit options for LeftRight Label and MW Marker; Added hyphen, minus, and em dash indicator types; Fix some minor bugs.

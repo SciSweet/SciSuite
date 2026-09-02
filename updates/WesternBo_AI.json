@@ -1,5 +1,5 @@
 {
-    "latestVersion": "2.1.2",
+    "latestVersion": "2.2.4",
     "downloadUrl": "https://scisuite.cc/westernbo",
-    "releaseNotes": "Added Clone Number section. Added Normalize Minus Only option for the Toggle Sign function. Add missing translation for key."
+    "releaseNotes": "Added NS (Non-Specific) Band Marker; Added more unit options for LeftRight Label and MW Marker; Added hyphen, minus, and em dash indicator types; Fix some minor bugs."
 }
