@@ -1,5 +1,5 @@
 {
-    "latestVersion": "2.2.4",
+    "latestVersion": "2.2.5",
     "downloadUrl": "https://scisuite.cc/westernbo",
-    "releaseNotes": "Added NS (Non-Specific) Band Marker; Added more unit options for LeftRight Label and MW Marker; Added hyphen, minus, and em dash indicator types; Fix some minor bugs."
+    "releaseNotes": "Added \"Rasterize\" option to Smart Crop."
 }
