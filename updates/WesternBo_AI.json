@@ -1,5 +1,5 @@
 {
-    "latestVersion": "2.2.5",
+    "latestVersion": "2.2.6",
     "downloadUrl": "https://scisuite.cc/westernbo",
-    "releaseNotes": "Added \"Rasterize\" option to Smart Crop."
+    "releaseNotes": "LeftRight Label now supports entering names or weights only by leaving either side of the semicolon empty."
 }
