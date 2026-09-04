@@ -1,5 +1,5 @@
 {
-    "latestVersion": "2.0.1",
+    "latestVersion": "2.0.2",
     "downloadUrl": "https://scisuite.cc/scipanel",
-    "releaseNotes": "Add missing translation for key."
+    "releaseNotes": "Fixed tooltip not updating promptly when switching languages."
 }

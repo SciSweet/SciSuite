@@ -1,5 +1,5 @@
 {
-    "latestVersion": "2.0.2",
+    "latestVersion": "2.0.3",
     "downloadUrl": "https://scisuite.cc/imagexi",
-    "releaseNotes": "Add missing translation for key."
+    "releaseNotes": "Fixed tooltip not updating promptly when switching languages."
 }

@@ -1,5 +1,5 @@
 {
-    "latestVersion": "2.0.0",
+    "latestVersion": "2.0.1",
     "downloadUrl": "https://scisuite.cc/guidemi",
-    "releaseNotes": "Added Custom Scripts."
+    "releaseNotes": "Fixed tooltip not updating promptly when switching languages."
 }

@@ -1,5 +1,5 @@
 {
-    "latestVersion": "2.0.1",
+    "latestVersion": "2.0.2",
     "downloadUrl": "https://scisuite.cc/imagexi",
-    "releaseNotes": "Fixed a bug where the nag screen could appear for activated users during use."
+    "releaseNotes": "Fixed tooltip not updating promptly when switching languages."
 }
